@@ -117,7 +117,7 @@
 "Formatting {
     set autoindent copyindent
     set shiftround
-    set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
+    " set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 
     "folding
     set foldenable foldmethod=indent foldminlines=5 foldlevel=99
