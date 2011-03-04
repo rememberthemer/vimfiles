@@ -10,3 +10,6 @@
 [submodule "bundle/tselectbuffer_vim"]
 	path = bundle/tselectbuffer_vim
 	url = git://github.com/tomtom/tselectbuffer_vim.git
+[submodule "bundle/ab-vim-colors"]
+	path = bundle/ab-vim-colors
+	url = ssh://adrian@evison.geo.vuw.ac.nz:10/Volumes/data/adrian/gitrepos/misc/ab-vim-colors.git
