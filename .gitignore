@@ -1,3 +1,6 @@
 python
 c-support
 .NERDTreeBookmarks
+tmp/
+tags/*.tags
+.netrwhist

@@ -1,0 +1,12 @@
+[submodule "bundle/quickfixsigns_vim"]
+	path = bundle/quickfixsigns_vim
+	url = git://github.com/tomtom/quickfixsigns_vim.git
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule "bundle/checksyntax_vim"]
+	path = bundle/checksyntax_vim
+	url = git://github.com/tomtom/checksyntax_vim.git
+[submodule "bundle/tselectbuffer_vim"]
+	path = bundle/tselectbuffer_vim
+	url = git://github.com/tomtom/tselectbuffer_vim.git
