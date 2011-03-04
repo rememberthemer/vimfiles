@@ -4,3 +4,4 @@ c-support
 tmp/
 tags/*.tags
 .netrwhist
+doc/tags

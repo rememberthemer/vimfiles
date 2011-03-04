@@ -129,21 +129,20 @@
     "---------------------------------------------------------------
     " buftabs
     "---------------------------------------------------------------
-        noremap <silent> <C-w><C-right> :bnext<CR>
-        noremap <silent> <C-w><C-left>  :bprev<CR>
-        let g:buftabs_only_basename=1
-        let g:buftabs_in_statusline=1
-        let g:buftabs_active_highlight_group="PmenuSel"
-        
-
+        " let g:buftabs_only_basename=1
+        " let g:buftabs_in_statusline=1
+        " let g:buftabs_active_highlight_group="PmenuSel"
+    
+    "---------------------------------------------------------------
+    " tselsectbuffer
         map <C-b> :TSelectBuffer<CR>
+    
     "---------------------------------------------------------------
     " csupport
-    "---------------------------------------------------------------
-        " let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
-"         let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
-        let g:C_LocalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
-        " let g:C_CodeSnippets=$HOME."/.vim/c-support/codesnippets"
+    let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
+    let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
+    let g:C_LocalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
+    let g:C_CodeSnippets=$HOME."/.vim/bundle/c-vim/c-support/codesnippets"
 
     "---------------------------------------------------------------
     " NERDCommenter
@@ -153,17 +152,15 @@
         let NERDSpaceDelims=1
  
     "---------------------------------------------------------------
-    " PYTHON STUFF
+    "PEP8
     "---------------------------------------------------------------
-        "---------------------------------------------------------------
-        "PEP8
-        "---------------------------------------------------------------
-        autocmd FileType python map <buffer> <C-F11> :call Pep8()<CR>
+    autocmd FileType python map <buffer> <C-F11> :call Pep8()<CR>
 
     "---------------------------------------------------------------
     " Ctags
     "---------------------------------------------------------------
-        set tags=./tags,/,~/.vim/tags/python2.7.tags
+    set tags=./tags,/,~/.vim/tags/python2.7.tags
+
     "---------------------------------------------------------------
     " NERDTree
     "---------------------------------------------------------------
@@ -213,43 +210,40 @@
     "---------------------------------------------------------------
     " Taglist
     "---------------------------------------------------------------
-        map <silent> <F3> :TlistToggle<CR>
-        let Tlist_Close_On_Select=0
-        let Tlist_GainFocus_On_ToggleOpen=1
-        let Tlist_Exit_OnlyWindow=1
-        let Tlist_Show_Menu=1
-        "let Tlist_Show_One_File=1
-        let Tlist_Use_Right_Window=1
-        let Tlist_File_Fold_Auto_Close = 0
-        let Tlist_Sort_Type = "order"
-        let Tlist_WinWidth = 45
-        let Tlist_Ctags_Cmd = 'ctags'
-        let Tlist_Compact_Format = 1
-        let Tlist_Auto_Open=0
-        let Tlist_Enable_Fold_Column=0
-        let Tlist_Display_Tag_Scope=1
-        let Tlist_Process_File_Always = 1
+    map <silent> <F3> :TlistToggle<CR>
+    let Tlist_Close_On_Select=0
+    let Tlist_GainFocus_On_ToggleOpen=1
+    let Tlist_Exit_OnlyWindow=1
+    let Tlist_Show_Menu=1
+    "let Tlist_Show_One_File=1
+    let Tlist_Use_Right_Window=1
+    let Tlist_File_Fold_Auto_Close = 0
+    let Tlist_Sort_Type = "order"
+    let Tlist_WinWidth = 45
+    let Tlist_Ctags_Cmd = 'ctags'
+    let Tlist_Compact_Format = 1
+    let Tlist_Auto_Open=0
+    let Tlist_Enable_Fold_Column=0
+    let Tlist_Display_Tag_Scope=1
+    let Tlist_Process_File_Always = 1
 
-        "...........................
-        " Language Specific Settings
-        "...........................
-        let tlist_python_settings = 'Python;f:function;c:class;m:member;i:imports;v:variables'
+    let tlist_python_settings = 'Python;f:function;c:class;m:member;i:imports;v:variables'
 
     "---------------------------------------------------------------
     " SnipMate
     "---------------------------------------------------------------
-        let g:snips_author = 'Adrian Benson <Adrian.M.Benson__AT__gmail__DOT__com>'
-        let g:snips_company = 'Adrian Benson'
-        let g:snips_copyright = g:snips_company
-        " #let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
+    let g:snips_author = 'Adrian Benson <Adrian.M.Benson__AT__gmail__DOT__com>'
+    let g:snips_company = 'Adrian Benson'
+    let g:snips_copyright = g:snips_company
+    let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
     
     "---------------------------------------------------------------
     " gundo
-    "--------------------------------------------------------------
     let g:gundo_disable = 0
     if g:gundo_disable != 1
         nnoremap <F11> :GundoToggle<CR>
     endif
+
     "---------------------------------------------------------------
     " bash supporrt
     "---------------------------------------------------------------
@@ -257,9 +251,9 @@
         "let g:BASH_LocalTemplateFile = '/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/templates/Templates'
         "let g:BASH_Dictionary_File ='/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/wordlists/bash.list'
         "let g:BASH_CodeSnippets = '/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/codesnippets'
+
     "---------------------------------------------------------------
     " Latex suite
-    "---------------------------------------------------------------
     set grepprg=grep\ -nH\ $*
     let g:tex_flavor='latex'
     " TIP: if you write your \label's as \label{fig:something}, then if you
@@ -267,9 +261,20 @@
     " all the figure labels. Very useful!
     " set iskeyword+=:
 
+    "---------------------------------------------------------------
+    " omnicompletion
+    set completeopt-=preview
+    set completeopt+=menuone
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Quickly switch buffers
+    noremap <silent> <C-w><C-right> :bnext<CR>
+    noremap <silent> <C-w><C-left>  :bprev<CR>
+    " Close the current buffer
+    map <leader>bd :bdelete<cr>
+    
     " " diff against on disk version
     "     if !exists(":DiffOrig")
     "         command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
@@ -277,8 +282,6 @@
 
     " Change Working Directory to that of the current file
         cmap cwd lcd %:p:h
-    " Close the current buffer
-    map <leader>bd :bdelete<cr>
     
     " Search the current file for the word under the cursor and display matches
     nmap <silent> <leader>gw :vimgrep /<C-r><C-w>/ %<CR>:ccl<CR>:cwin<CR><C-W>J:set nohls<CR>
@@ -290,42 +293,36 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-        " au BufEnter * :syntax sync minlines=200
+    "helpfile
+    au FileType help set nonumber      " no line numbers when viewing help
+    au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
+    au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
+    
+    " Tweak python hilighting etc
+    au FileType python syn keyword pythonDecorator True None False self
+    let python_highlight_all = 1
+    let python_highlight_builtin_objs = 1
+    let python_highlight_builtin_funcs = 1
+    let python_highlight_exceptions = 1
+    let python_highlight_string_formatting = 1
+    let python_highlight_string_format = 1
+    let python_highlight_string_templates = 1
+    let python_highlight_doctests = 1
+    let python_highlight_space_errors = 0
+    let python_highlight_indent_errors = 0
+    
+    au filetype python setlocal sw=4 et sts=4 foldmethod=indent
+    " trim trailing white space
+    au BufWritePre *.py normal m`:%s/\s\+$//e``
 
-        "helpfile
-        au FileType help set nonumber      " no line numbers when viewing help
-        au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
-        au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
-        
-        "pythonautocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vim/python
-        let python_highlight_all = 1
-        au FileType python syn keyword pythonDecorator True None False self
-        let python_highlight_builtin_objs = 1
-        let python_highlight_builtin_funcs = 1
-        let python_highlight_exceptions = 1
-        let python_highlight_string_formatting = 1
-        let python_highlight_string_format = 1
-        let python_highlight_string_templates = 1
-        let python_highlight_doctests = 1
-        let python_highlight_space_errors = 0
-        let python_highlight_indent_errors = 0
 
+    au filetype sh setlocal sw=4 et sts=4 foldmethod=manual
 
-    "---------------------------------------------------------------
-    " omnicompletion
-    "---------------------------------------------------------------
+    "au BufRead,BufNewFile *.cpp setlocal cindent foldmarker={,} foldmethod=marker
+    "au BufRead,BufNewFile *.cxx setlocal cindent foldmarker={,} foldmethod=marker
+    "au BufRead,BufNewFile *.c   setlocal cindent foldmarker={,} foldmethod=marker
 
-        " trim trailing white space
-        autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
-        set completeopt-=preview
-        set completeopt+=menuone
-
-        au filetype python setlocal sw=4 et sts=4 foldmethod=indent
-        au filetype sh setlocal sw=4 et sts=4 foldmethod=manual
-
-        "au BufRead,BufNewFile *.cpp setlocal cindent foldmarker={,} foldmethod=marker
-        "au BufRead,BufNewFile *.cxx setlocal cindent foldmarker={,} foldmethod=marker
-        "au BufRead,BufNewFile *.c   setlocal cindent foldmarker={,} foldmethod=marker
-        au BufWritePost ~/.vimrc   so ~/.vimrc
+    " reread .vimrc when saved
+    au BufWritePost ~/.vimrc   so ~/.vimrc
 
 " vim: set sw=4 sts=4 et ft=vim :
