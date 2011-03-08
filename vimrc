@@ -235,7 +235,7 @@
     let g:snips_author = 'Adrian Benson <Adrian.M.Benson__AT__gmail__DOT__com>'
     let g:snips_company = 'Adrian Benson'
     let g:snips_copyright = g:snips_company
-    let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
+    " let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
     
     "---------------------------------------------------------------
     " gundo
