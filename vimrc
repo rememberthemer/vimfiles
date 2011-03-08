@@ -210,7 +210,7 @@
     "---------------------------------------------------------------
     " Taglist
     "---------------------------------------------------------------
-    map <silent> <F3> :TlistToggle<CR>
+    " map <silent> <F3> :TlistToggle<CR>
     let Tlist_Close_On_Select=0
     let Tlist_GainFocus_On_ToggleOpen=1
     let Tlist_Exit_OnlyWindow=1
@@ -228,7 +228,10 @@
     let Tlist_Process_File_Always = 1
 
     let tlist_python_settings = 'Python;f:function;c:class;m:member;i:imports;v:variables'
-
+    "---------------------------------------------------------------
+    " TagBar
+    "---------------------------------------------------------------
+    map <silent> <F3> :TagbarToggle<CR>
     "---------------------------------------------------------------
     " SnipMate
     "---------------------------------------------------------------
