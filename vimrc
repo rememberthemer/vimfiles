@@ -67,8 +67,8 @@
     
     set shell=/bin/bash
     "modeline stuff
-    set modelines=0
-    let g:secure_modelines_verbose = 0
+    " set modelines=0
+    " let g:secure_modelines_verbose = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
