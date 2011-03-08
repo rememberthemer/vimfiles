@@ -4,9 +4,9 @@
 
     set nocompatible      " must be first line
     " The next two lines ensure that the ~/.vim/bundle/ system works
+    
     runtime! autoload/pathogen.vim
     silent! call pathogen#runtime_append_all_bundles()
-    " silent! call pathogen#runtime_append_all_bundles("vimpyre")
     silent! call pathogen#helptags()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -125,20 +125,17 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-        
-    "---------------------------------------------------------------
-    " buftabs
-    "---------------------------------------------------------------
-        " let g:buftabs_only_basename=1
-        " let g:buftabs_in_statusline=1
-        " let g:buftabs_active_highlight_group="PmenuSel"
-    
+    let MRU_File = $HOME."/.vim/tmp/vim_mru_files"
+    let MRU_Max_Menu_Entries = 20
+    let MRU_Max_Submenu_Entries = 20
     "---------------------------------------------------------------
     " tselsectbuffer
-        map <C-b> :TSelectBuffer<CR>
+    "---------------------------------------------------------------
+    map <C-b> :TSelectBuffer<CR>
     
     "---------------------------------------------------------------
     " csupport
+    "---------------------------------------------------------------
     let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
     let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
     let g:C_LocalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
@@ -151,11 +148,6 @@
         "let g:loaded_nerd_comments=1
         let NERDSpaceDelims=1
  
-    "---------------------------------------------------------------
-    "PEP8
-    "---------------------------------------------------------------
-    autocmd FileType python map <buffer> <C-F11> :call Pep8()<CR>
-
     "---------------------------------------------------------------
     " Ctags
     "---------------------------------------------------------------
@@ -170,7 +162,7 @@
         map <silent> <F2> :NERDTreeToggle<CR>
         " Store the bookmarks file in perforce
         "~/Documents/customisation/vim/abvim/.NERDTreeBookmarks"
-        let NERDTreeBookmarksFile="/home/bensonad/.vim/.NERDTreeBookmarks"
+        let NERDTreeBookmarksFile="/home/bensonad/.vim/tmp/.NERDTreeBookmarks"
         " Show the bookmarks table on startup
         let NERDTreeShowBookmarks=1
         let NERDTreeShowHidden=1
@@ -247,13 +239,7 @@
         nnoremap <F11> :GundoToggle<CR>
     endif
 
-    "---------------------------------------------------------------
-    " bash supporrt
-    "---------------------------------------------------------------
-        "let g:BASH_GlobalTemplateFilddde = '/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/templates/Templates'
-        "let g:BASH_LocalTemplateFile = '/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/templates/Templates'
-        "let g:BASH_Dictionary_File ='/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/wordlists/bash.list'
-        "let g:BASH_CodeSnippets = '/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/codesnippets'
+       "let g:BASH_CodeSnippets = '/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/codesnippets'
 
     "---------------------------------------------------------------
     " Latex suite
