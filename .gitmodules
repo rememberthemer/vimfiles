@@ -70,10 +70,6 @@
 	path = bundle/OmniCppComplete
 	url = https://github.com/vim-scripts/OmniCppComplete.git
 	ignore = dirty
-[submodule "bundle/vcscommand"]
-	path = bundle/vcscommand
-	url = git://repo.or.cz/vcscommand
-	ignore = dirty
 [submodule "bundle/pydoc"]
 	path = bundle/pydoc
 	url = https://github.com/vim-scripts/pydoc.vim.git
@@ -81,8 +77,4 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-	ignore = dirty
-[submodule "bundle/hypergit"]
-	path = bundle/hypergit
-	url = https://github.com/c9s/hypergit.vim.git
 	ignore = dirty
