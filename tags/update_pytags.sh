@@ -1,6 +1,5 @@
 #!/bin/bash
 
-pyvers=(2.7)
 
 
 # for pyver in ${pyvers[*]}; do
