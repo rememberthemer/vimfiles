@@ -14,10 +14,6 @@
 	path = bundle/tselectbuffer_vim
 	url = git://github.com/tomtom/tselectbuffer_vim.git
 	ignore = dirty
-[submodule "bundle/ab-vim-colors"]
-	path = bundle/ab-vim-colors
-	url = ssh://adrian@evison.geo.vuw.ac.nz:10/Volumes/data/adrian/gitrepos/misc/ab-vim-colors.git
-	ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
