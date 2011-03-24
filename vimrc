@@ -251,9 +251,9 @@
     " set iskeyword+=:
 
     "---------------------------------------------------------------
-    " omnicompletion
-    set completeopt-=preview
-    set completeopt+=menuone
+    " completion
+    " set completeopt-=preview
+    " set completeopt+=menuone
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
@@ -300,7 +300,7 @@
     let python_highlight_space_errors = 0
     let python_highlight_indent_errors = 0
     
-    au filetype python setlocal sw=4 et sts=4 foldmethod=indent
+    au filetype python setlocal sw=4 et sts=4 foldmethod=indent tw=140
     " trim trailing white space
     au BufWritePre *.py normal m`:%s/\s\+$//e``
 
