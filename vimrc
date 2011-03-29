@@ -125,6 +125,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "---------------------------------------------------------------
+    " pep8
+    "---------------------------------------------------------------
+    let g:pep8_args = "--ignore=E501,W391"
+    "---------------------------------------------------------------
+    " most recently used
+    "---------------------------------------------------------------
     let MRU_File = $HOME."/.vim/tmp/vim_mru_files"
     let MRU_Max_Menu_Entries = 20
     let MRU_Max_Submenu_Entries = 20
@@ -144,9 +151,9 @@
     "---------------------------------------------------------------
     " NERDCommenter
     "----------------------------------:-----------------------------
-        "uncomment to disable
-        "let g:loaded_nerd_comments=1
-        let NERDSpaceDelims=1
+    "uncomment to disable
+    "let g:loaded_nerd_comments=1
+    let NERDSpaceDelims=1
  
     "---------------------------------------------------------------
     " Ctags
@@ -156,48 +163,48 @@
     "---------------------------------------------------------------
     " NERDTree
     "---------------------------------------------------------------
-        "let loaded_nerd_tree=1     "to disable
-        let NERDChristmasTree=1
-        let NERDTreeMouseMode=2
-        map <silent> <F2> :NERDTreeToggle<CR>
-        " Store the bookmarks file in perforce
-        "~/Documents/customisation/vim/abvim/.NERDTreeBookmarks"
-        let NERDTreeBookmarksFile="/home/bensonad/.vim/tmp/.NERDTreeBookmarks"
-        " Show the bookmarks table on startup
-        let NERDTreeShowBookmarks=1
-        let NERDTreeShowHidden=1
-        let NERDTreeCaseSensitiveSort=1
-        
-        " close vim when NERDTree  is only buffer
-        function! NERDTreeQuit()
-            redir => buffersoutput
-            silent buffers
-            redir END
-            "                     1BufNo  2Mods.     3File           4LineNo
-            let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
-            let windowfound = 0
+    "let loaded_nerd_tree=1     "to disable
+    let NERDChristmasTree=1
+    let NERDTreeMouseMode=2
+    map <silent> <F2> :NERDTreeToggle<CR>
+    " Store the bookmarks file in perforce
+    "~/Documents/customisation/vim/abvim/.NERDTreeBookmarks"
+    let NERDTreeBookmarksFile="/home/bensonad/.vim/tmp/.NERDTreeBookmarks"
+    " Show the bookmarks table on startup
+    let NERDTreeShowBookmarks=1
+    let NERDTreeShowHidden=1
+    let NERDTreeCaseSensitiveSort=1
+    
+    " close vim when NERDTree  is only buffer
+    function! NERDTreeQuit()
+        redir => buffersoutput
+        silent buffers
+        redir END
+        "                     1BufNo  2Mods.     3File           4LineNo
+        let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+        let windowfound = 0
 
-            for bline in split(buffersoutput, "\n")
-                let m = matchlist(bline, pattern)
+        for bline in split(buffersoutput, "\n")
+            let m = matchlist(bline, pattern)
 
-                if (len(m) > 0)
-                    if (m[2] =~ '..a..')
-                            let windowfound = 1
-                    endif
+            if (len(m) > 0)
+                if (m[2] =~ '..a..')
+                        let windowfound = 1
                 endif
-            endfor
-
-            if (!windowfound)
-                quitall
             endif
-        endfunction
-        autocmd WinEnter * call NERDTreeQuit()
+        endfor
 
-        "" Don't display these kinds of files
-        "let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
-        "        \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
-        "        \ '\.embed\.manifest$', '\.embed\.manifest.res$',
-        "        \ '\.intermediate\.manifest$', '^mt.dep$' ]
+        if (!windowfound)
+            quitall
+        endif
+    endfunction
+    autocmd WinEnter * call NERDTreeQuit()
+
+    "" Don't display these kinds of files
+    "let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
+    "        \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
+    "        \ '\.embed\.manifest$', '\.embed\.manifest.res$',
+    "        \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
     "---------------------------------------------------------------
     " Taglist
@@ -238,8 +245,6 @@
     if g:gundo_disable != 1
         nnoremap <F11> :GundoToggle<CR>
     endif
-
-       "let g:BASH_CodeSnippets = '/home/bensonad/.vim/vimpyre/bash-support.vim/bash-support/codesnippets'
 
     "---------------------------------------------------------------
     " Latex suite
