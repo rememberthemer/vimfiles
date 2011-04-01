@@ -312,6 +312,7 @@
 
     au filetype sh setlocal sw=4 et sts=4 foldmethod=manual
 
+    au BufRead,BufNewFile *PKGBUILD setlocal ft=sh sw=4 et sts=4
     "au BufRead,BufNewFile *.cpp setlocal cindent foldmarker={,} foldmethod=marker
     "au BufRead,BufNewFile *.cxx setlocal cindent foldmarker={,} foldmethod=marker
     "au BufRead,BufNewFile *.c   setlocal cindent foldmarker={,} foldmethod=marker
