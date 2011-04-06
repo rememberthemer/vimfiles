@@ -85,7 +85,7 @@
             set t_Co=256
             color ab-molokai
             let &t_SI = "\<Esc>]12;orange\x7"
-            let &t_EI = "\<Esc>]12;lightgrey\x7"
+            let &t_EI = "\<Esc>]12;chocolate\x7"
         endif
         
         " hi ColorColumn guibg=lightgrey ctermbg=lightgrey
