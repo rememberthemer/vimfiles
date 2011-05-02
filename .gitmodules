@@ -82,3 +82,7 @@
 	path = bundle/bash-support
 	url = https://github.com/vim-scripts/bash-support.vim.git
 	ignore = dirty
+[submodule "bundle/xml.vim"]
+	path = bundle/xml.vim
+	url = git://github.com/vim-scripts/xml.vim.git
+	ignore = dirty
