@@ -47,7 +47,7 @@ hi link htmlEndTag                  xmlEndTag
 highlight Normal                    guifg=#E6E1DC guibg=#444444
 
 highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
-highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
+highlight CursorLine                guibg=#333333 ctermbg=233 cterm=NONE
 
 highlight Comment                   guifg=#BC9458 ctermfg=180 gui=italic
 highlight Constant                  guifg=#6D9CBE ctermfg=73
@@ -58,7 +58,7 @@ highlight Identifier                guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
 highlight Include                   guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
 highlight PreCondit                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
 highlight Keyword                   guifg=#CC7833 ctermfg=173 cterm=NONE
-highlight LineNr                    guifg=#2B2B2B ctermfg=159 guibg=#C0C0FF
+highlight LineNr                    guifg=#777777 ctermfg=159 guibg=#333333
 highlight Number                    guifg=#A5C261 ctermfg=107
 highlight PreProc                   guifg=#E6E1DC ctermfg=103
 highlight Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline
