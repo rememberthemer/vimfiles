@@ -48,39 +48,39 @@
 	ignore = dirty
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
+	url = git://github.com/sjl/gundo.vim.git
 	ignore = dirty
 [submodule "bundle/taglist"]
 	path = bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
+	url = git://github.com/vim-scripts/taglist.vim.git
 	ignore = dirty
 [submodule "bundle/pep8"]
 	path = bundle/pep8
-	url = https://github.com/nvie/vim-pep8.git
+	url = git://github.com/nvie/vim-pep8.git
 	ignore = dirty
 [submodule "bundle/align"]
 	path = bundle/align
-	url = https://github.com/vim-scripts/Align.git
+	url = git://github.com/vim-scripts/Align.git
 	ignore = dirty
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
-	url = https://github.com/vim-scripts/OmniCppComplete.git
+	url = git://github.com/vim-scripts/OmniCppComplete.git
 	ignore = dirty
 [submodule "bundle/pydoc"]
 	path = bundle/pydoc
-	url = https://github.com/vim-scripts/pydoc.vim.git
+	url = git://github.com/vim-scripts/pydoc.vim.git
 	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
+	url = git://github.com/majutsushi/tagbar.git
 	ignore = dirty
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+	url = git://github.com/tpope/vim-fugitive.git
 	ignore = dirty
 [submodule "bundle/bash-support"]
 	path = bundle/bash-support
-	url = https://github.com/vim-scripts/bash-support.vim.git
+	url = git://github.com/vim-scripts/bash-support.vim.git
 	ignore = dirty
 [submodule "bundle/xml.vim"]
 	path = bundle/xml.vim
