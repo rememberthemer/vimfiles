@@ -22,13 +22,13 @@ let g:colors_name = expand('<sfile>:t:r')
 "}}}
 
 " General "{{{
-hi Normal       guifg=#e5e5e5 guibg=#444444 gui=none
+hi Normal       guifg=#DEDECE guibg=#444444 gui=none
 
 hi Cursor       guifg=#304050 guibg=#f0e68c gui=none
 hi lCursor      guifg=#000000 guibg=#55cc55 gui=none
 
 hi CursorColumn guifg=NONE    guibg=#101010 gui=none
-hi CursorLine   guifg=NONE    guibg=#101010 gui=none
+hi CursorLine   guifg=NONE    guibg=#302020 gui=none
 
 
 hi Folded       guifg=#b0b0b0 guibg=#343434 gui=none
@@ -52,7 +52,7 @@ hi TabLineFill  guifg=#c2bfa5 guibg=NONE    gui=underline
 hi Search       guifg=fg      guibg=#4466bb gui=none
 hi IncSearch    guifg=fg      guibg=#119922 gui=none
 
-hi Visual       guifg=#f0f0f0 guibg=#406070 gui=none
+hi Visual       guibg=#406070 gui=none
 
 hi Directory    guifg=#bf8f67 guibg=bg      gui=none
 
