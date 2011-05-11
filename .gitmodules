@@ -89,9 +89,12 @@
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
+	ignore = dirty
 [submodule "bundle/colorizer"]
 	path = bundle/colorizer
 	url = git://github.com/lilydjwg/colorizer.git
+	ignore = dirty
 [submodule "bundle/Conque-Shell"]
 	path = bundle/Conque-Shell
 	url = git://github.com/vim-scripts/Conque-Shell.git
+	ignore = dirty
