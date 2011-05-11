@@ -257,7 +257,7 @@
 
     "---------------------------------------------------------------
     " completion
-    " set completeopt-=preview
+    set completeopt-=preview
     " set completeopt+=menuone
 
     let loaded_colorizer = 1
