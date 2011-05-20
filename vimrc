@@ -76,13 +76,14 @@
         set background=light
         if  has("gui_running")
             color ab-molokai
-            set guifont=Envy\ Code\ R\ 10
-            " set guifont=Dina\ 12
-            set lines=40 columns=95
+            " set guifont=Envy\ Code\ R\ 10
+            set guifont=Dina\ 12
+            set lines=50 columns=120
             set guioptions=aegim
-            set linespace=0
+            set linespace=1
         else
             set t_Co=256
+            set ttyfast
             color ab-molokai
             let &t_SI = "\<Esc>]12;orange\x7"
             let &t_EI = "\<Esc>]12;chocolate\x7"
@@ -98,11 +99,11 @@
 
     " Message & Status Stuff
         set showmode showcmd cmdheight=2
-        set statusline=%F\ %m\ %=\b%n\ %y%r%w\ %4l\ %2c\ %P
+        set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
         set laststatus=2
         set wildmenu
         set wildmode=list:longest " turn on wild mode huge list
-        set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
+        set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
 
     " Search Stuff
         set showmatch incsearch ignorecase smartcase hlsearch
@@ -158,7 +159,7 @@
     "---------------------------------------------------------------
     " Ctags
     "---------------------------------------------------------------
-    set tags=./tags,/,~/.vim/tags/python2.7.tags
+    " set tags=./tags,/
 
     "---------------------------------------------------------------
     " NERDTree
@@ -169,7 +170,7 @@
     map <silent> <F2> :NERDTreeToggle<CR>
     " Store the bookmarks file in perforce
     "~/Documents/customisation/vim/abvim/.NERDTreeBookmarks"
-    let NERDTreeBookmarksFile="/home/bensonad/.vim/tmp/.NERDTreeBookmarks"
+    let NERDTreeBookmarksFile=$HOME."/.vim/tmp/.NERDTreeBookmarks"
     " Show the bookmarks table on startup
     let NERDTreeShowBookmarks=1
     let NERDTreeShowHidden=1
@@ -260,7 +261,7 @@
     set completeopt-=preview
     " set completeopt+=menuone
 
-    let loaded_colorizer = 1
+    " let loaded_colorizer = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -319,6 +320,6 @@
     "au BufRead,BufNewFile *.c   setlocal cindent foldmarker={,} foldmethod=marker
 
     " reread .vimrc when saved
-    au BufWritePost ~/.vimrc   so ~/.vimrc
+    " au BufWritePost ~/.vimrc   so ~/.vimrc
 
 " vim: set sw=4 sts=4 et ft=vim :
