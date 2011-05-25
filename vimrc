@@ -76,8 +76,8 @@
         set background=light
         if  has("gui_running")
             color ab-molokai
-            " set guifont=Envy\ Code\ R\ 10
-            set guifont=Dina\ 12
+            set guifont=Envy\ Code\ R\ 10
+            " set guifont=Dina\ 12
             set lines=50 columns=120
             set guioptions=aegim
             set linespace=1
@@ -320,6 +320,6 @@
     "au BufRead,BufNewFile *.c   setlocal cindent foldmarker={,} foldmethod=marker
 
     " reread .vimrc when saved
-    " au BufWritePost ~/.vimrc   so ~/.vimrc
+    au BufWritePost ~/.vimrc   so ~/.vimrc
 
 " vim: set sw=4 sts=4 et ft=vim :
