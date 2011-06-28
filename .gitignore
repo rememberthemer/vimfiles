@@ -5,3 +5,4 @@ tmp/
 tags/*.tags
 .netrwhist
 doc/tags
+bundle/ltx
