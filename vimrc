@@ -85,8 +85,9 @@
             set t_Co=256
             set ttyfast
             color ab-molokai
-            let &t_SI = "\<Esc>]12;orange\x7"
+            let &t_SI = "\<Esc>]12;yellow\x7"
             let &t_EI = "\<Esc>]12;chocolate\x7"
+            autocmd VimLeave * :!echo -ne "\033]12;chocolate\007"
         endif
         
         " hi ColorColumn guibg=lightgrey ctermbg=lightgrey
