@@ -98,3 +98,6 @@
 	path = bundle/Conque-Shell
 	url = git://github.com/vim-scripts/Conque-Shell.git
 	ignore = dirty
+[submodule "AutomaticTexPlugin"]
+	path = AutomaticTexPlugin
+	url = git://github.com/vim-scripts/AutomaticTexPlugin.git
