@@ -42,18 +42,6 @@
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
 	ignore = dirty
-[submodule "bundle/vim-latex"]
-	path = bundle/vim-latex
-	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
-	ignore = dirty
-[submodule "bundle/gundo"]
-	path = bundle/gundo
-	url = git://github.com/sjl/gundo.vim.git
-	ignore = dirty
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = git://github.com/vim-scripts/taglist.vim.git
-	ignore = dirty
 [submodule "bundle/pep8"]
 	path = bundle/pep8
 	url = git://github.com/nvie/vim-pep8.git
@@ -65,10 +53,6 @@
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
 	url = git://github.com/vim-scripts/OmniCppComplete.git
-	ignore = dirty
-[submodule "bundle/pydoc"]
-	path = bundle/pydoc
-	url = git://github.com/vim-scripts/pydoc.vim.git
 	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
@@ -82,22 +66,7 @@
 	path = bundle/bash-support
 	url = git://github.com/vim-scripts/bash-support.vim.git
 	ignore = dirty
-[submodule "bundle/xml.vim"]
-	path = bundle/xml.vim
-	url = git://github.com/vim-scripts/xml.vim.git
-	ignore = dirty
-[submodule "bundle/gitv"]
-	path = bundle/gitv
-	url = git://github.com/gregsexton/gitv.git
-	ignore = dirty
-[submodule "bundle/colorizer"]
-	path = bundle/colorizer
-	url = git://github.com/lilydjwg/colorizer.git
-	ignore = dirty
-[submodule "bundle/Conque-Shell"]
-	path = bundle/Conque-Shell
-	url = git://github.com/vim-scripts/Conque-Shell.git
-	ignore = dirty
 [submodule "AutomaticTexPlugin"]
 	path = AutomaticTexPlugin
 	url = git://github.com/vim-scripts/AutomaticTexPlugin.git
+	ignore = dirty
