@@ -82,3 +82,7 @@
 	path = autoload
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
+[submodule "bundle/ManPageView"]
+	path = bundle/ManPageView
+	url = https://github.com/vim-scripts/ManPageView.git
+	ignore = dirty
