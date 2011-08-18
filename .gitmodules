@@ -78,3 +78,6 @@
 	path = bundle/ManPageView
 	url = https://github.com/vim-scripts/ManPageView.git
 	ignore = dirty
+[submodule "bundle/tskeleton_vim"]
+	path = bundle/tskeleton_vim
+	url = https://github.com/tomtom/tskeleton_vim.git
