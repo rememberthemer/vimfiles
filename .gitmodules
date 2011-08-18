@@ -70,17 +70,9 @@
 	path = bundle/AutomaticTexPlugin.git
 	url = git://github.com/vim-scripts/AutomaticTexPlugin.git
 	ignore = dirty
-[submodule "bundle/Color-Sampler-Pack"]
-	path = bundle/Color-Sampler-Pack
-	url = git://github.com/vim-scripts/Color-Sampler-Pack.git
-	ignore = dirty
 [submodule "bundle/Tex9"]
 	path = bundle/Tex9
 	url = git://github.com/vim-scripts/TeX-9.git
-	ignore = dirty
-[submodule "autoload"]
-	path = autoload
-	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
 [submodule "bundle/ManPageView"]
 	path = bundle/ManPageView
