@@ -66,18 +66,19 @@ au BufWinEnter * silent! loadview
 
 set shell=/bin/bash
 "modeline stuff
-" set modelines=0
+set modeline
 " let g:secure_modelines_verbose = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors & Stuff
-set background=light
+set background=dark
 if  has("gui_running")
     color ab-molokai
-    set guifont=Envy\ Code\ R\ 10
+    " set guifont=Envy\ Code\ R\ 10
     " set guifont=Dina\ 12
-    set lines=45 columns=120 linespace=1
+    set guifont=Tamsyn\ 11
+    set lines=45 columns=100 linespace=1
     set guioptions=aegim
 else
     set t_Co=256
