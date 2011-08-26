@@ -270,8 +270,7 @@ let python_highlight_indent_errors = 0
 " default python modeline
 au filetype python setlocal sw=4 et sts=4 foldmethod=indent tw=140
 " trim trailing white space
-au BufWritePre *.py normal m`:%s/\s\+$//e``
-
+au BufWritePre *.py :%s/\s\+$//e
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other Auto Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
