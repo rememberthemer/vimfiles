@@ -76,8 +76,8 @@ set background=dark
 if  has("gui_running")
     color ab-molokai
     " set guifont=Envy\ Code\ R\ 10
-    " set guifont=Dina\ 12
-    set guifont=Tamsyn\ 11
+    set guifont=Dina\ 12
+    " set guifont=Tamsyn\ 11
     set lines=45 columns=100 linespace=1
     set guioptions=aegim
 else
