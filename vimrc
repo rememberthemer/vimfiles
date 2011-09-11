@@ -220,7 +220,7 @@ let g:tex_flavor='latex'
 " ATP plugin
 let b:atp_TexCompiler	= "pdflatex"			
 let b:atp_BibCompiler	= "bibtex"			
-
+let g:atp_Python = "/usr/bin/python2"
 "---------------------------------------------------------------
 " completion
 set completeopt-=preview
