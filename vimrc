@@ -74,16 +74,18 @@ set modeline
 " Colors & Stuff
 set background=dark
 if  has("gui_running")
-    color ab-molokai
-    " set guifont=Envy\ Code\ R\ 10
-    set guifont=Dina\ 12
+    " color ab-molokai
+    color ab-github
+    set guifont=Envy\ Code\ R\ 10
+    " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
     set lines=45 columns=100 linespace=1
     set guioptions=aegim
 else
     set t_Co=256
     set ttyfast
-    color ab-molokai
+    " color ab-molokai
+    color ab-github
     " cursor color
     let &t_SI = "\<Esc>]12;yellow\x7"
     let &t_EI = "\<Esc>]12;chocolate\x7"
