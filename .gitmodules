@@ -78,3 +78,7 @@
 	path = bundle/taglist.vim
 	url = git://github.com/vim-scripts/taglist.vim.git
 	ignore = dirty
+[submodule "bundle/SimpylFold"]
+	path = bundle/SimpylFold
+	url = git://github.com/tmhedberg/SimpylFold.git
+	ignore = dirty
