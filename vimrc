@@ -72,7 +72,7 @@ set modeline
 " Vim UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors & Stuff
-set background=dark
+set background=light
 if  has("gui_running")
     " color ab-molokai
     color ab-github
@@ -82,7 +82,7 @@ if  has("gui_running")
     " set guifont=Tamsyn\ 11
     set lines=45 columns=100 linespace=1
     set guioptions=aegim
-else
+elseif &term =~ "xterm"
     set t_Co=256
     set ttyfast
     " color ab-molokai
@@ -91,7 +91,10 @@ else
     let &t_SI = "\<Esc>]12;yellow\x7"
     let &t_EI = "\<Esc>]12;chocolate\x7"
     autocmd VimLeave * :!echo -ne "\033]12;chocolate\007"
+else
+    color default
 endif
+
 
 " hi ColorColumn guibg=lightgrey ctermbg=lightgrey
 set backspace=eol,start,indent
@@ -128,6 +131,10 @@ set foldenable foldmethod=indent foldminlines=5 foldlevel=99
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"---------------------------------------------------------------
+" TList
+"---------------------------------------------------------------
+let Tlist_Use_Right_Window=1
 "---------------------------------------------------------------
 " pep8
 "---------------------------------------------------------------
@@ -249,7 +256,7 @@ nnoremap <leader>w :silent !xdg-open <C-R>=escape("<C-R><C-F>", "#?&;\|%")<CR><C
 
 map <C-b> :TSelectBuffer<CR>
 map <silent> <F2> :NERDTreeToggle<CR>
-map <silent> <F3> :TagbarToggle<CR>
+map <silent> <F3> :TlistToggle<CR>
 
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>

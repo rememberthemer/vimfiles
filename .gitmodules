@@ -54,10 +54,6 @@
 	path = bundle/OmniCppComplete
 	url = git://github.com/vim-scripts/OmniCppComplete.git
 	ignore = dirty
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
-	ignore = dirty
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
@@ -77,4 +73,8 @@
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = git://github.com/xolox/vim-easytags.git
+	ignore = dirty
+[submodule "bundle/taglist.vim"]
+	path = bundle/taglist.vim
+	url = git://github.com/vim-scripts/taglist.vim.git
 	ignore = dirty
