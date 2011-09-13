@@ -77,6 +77,7 @@ if  has("gui_running")
     " color ab-molokai
     color ab-github
     set guifont=Envy\ Code\ R\ 10
+    set guicursor+=n-v-c:blinkon0
     " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
     set lines=45 columns=100 linespace=1
