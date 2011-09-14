@@ -125,7 +125,7 @@ set autoindent copyindent shiftround
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 
 "folding
-set foldenable foldmethod=indent foldminlines=5 foldlevel=99
+set foldenable foldmethod=indent foldminlines=1 foldlevel=5
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -293,7 +293,7 @@ au FileType help set nonumber      " no line numbers when viewing help
 au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
-au filetype sh setlocal sw=4 et sts=4 foldmethod=manual
+au filetype sh setlocal sw=4 et sts=4 foldmethod=indent
 
 " arch PKGBUILD
 au BufRead,BufNewFile *PKGBUILD setlocal ft=sh
