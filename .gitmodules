@@ -82,3 +82,7 @@
 	path = bundle/SimpylFold
 	url = git://github.com/tmhedberg/SimpylFold.git
 	ignore = dirty
+[submodule "bundle/vim-notes"]
+	path = bundle/vim-notes
+	url = git://github.com/xolox/vim-notes.git
+	ignore = dirty
