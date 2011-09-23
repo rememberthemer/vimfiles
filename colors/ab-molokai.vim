@@ -24,6 +24,7 @@ else
 endif
 " let s:molokai_original = 1
 
+hi Normal          guifg=#dadada guibg=#444444
 hi Boolean         guifg=#AE81FF
 hi Character       guifg=#E6DB74
 hi Number          guifg=#AE81FF
@@ -103,12 +104,13 @@ hi Visual                        guibg=#121212
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 
-hi Normal          guifg=#dadada guibg=#444444
 hi Comment         guifg=#8B8778
 hi CursorLine                    guibg=#3E3D32
 hi CursorColumn                  guibg=#3E3D32
+hi ColorColumn			 guibg=#000000
 hi LineNr          guifg=#BCBCBC guibg=#3B3A32
 hi NonText         guifg=#BCBCBC guibg=#3B3A32
+
 
 "
 " Support for 256-color terminal
@@ -195,5 +197,6 @@ if &t_Co > 255
    hi Visual                      ctermbg=233
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
+   hi ColorColumn	          ctermbg=0
 
 end
