@@ -125,7 +125,7 @@ set autoindent copyindent shiftround
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 
 "folding
-set foldenable foldmethod=indent foldminlines=1 foldlevel=5
+set foldenable foldmethod=syntax foldminlines=1 foldlevel=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,7 +134,10 @@ set foldenable foldmethod=indent foldminlines=1 foldlevel=5
 "---------------------------------------------------------------
 " Notes
 "---------------------------------------------------------------
-let g:notes_directory = '~/Documents/Notes'
+" let g:loaded_notes = 1
+let g:notes_directory = '~/Documents/VimNotes'
+let g:notes_indexfile = '~/Documents/VimNotes/.index/index.sqlite3'
+let g:notes_tagsindex = '~/Documents/VimNotes/.index/tags.txt'
 "---------------------------------------------------------------
 " TList
 "---------------------------------------------------------------
@@ -282,7 +285,7 @@ let python_highlight_space_errors = 0
 let python_highlight_indent_errors = 0
 
 " default python modeline
-au filetype python setlocal sw=4 et sts=4 foldmethod=indent tw=140
+au filetype python setlocal sw=4 et sts=4 tw=79
 " trim trailing white space
 au BufWritePre *.py :%s/\s\+$//e
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
