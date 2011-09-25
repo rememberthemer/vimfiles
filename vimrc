@@ -74,13 +74,13 @@ set modeline
 " Colors & Stuff
 set background=light
 if  has("gui_running")
-    color ab-molokai
-    " color ab-github
+    " color ab-molokai
+    color ab-github
     set guifont=Envy\ Code\ R\ 10
     set guicursor+=n-v-c:blinkon0
     " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
-    set lines=45 columns=100 linespace=1
+    set lines=45 columns=100 linespace=2
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
@@ -125,7 +125,7 @@ set autoindent copyindent shiftround
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 
 "folding
-set foldenable foldmethod=syntax foldminlines=1 foldlevel=1
+set foldenable foldmethod=indent foldminlines=1 foldlevel=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
