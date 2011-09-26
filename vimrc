@@ -74,13 +74,13 @@ set modeline
 " Colors & Stuff
 set background=light
 if  has("gui_running")
-    color ab-molokai
-    " color ab-github
+    " color ab-molokai
+    color ab-github
     set guifont=Envy\ Code\ R\ 10
     set guicursor+=n-v-c:blinkon0
     " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
-    set lines=45 columns=100 linespace=1
+    set lines=45 columns=100 linespace=2
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
@@ -125,7 +125,7 @@ set autoindent copyindent shiftround
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 
 "folding
-set foldenable foldmethod=indent foldminlines=1 foldlevel=5
+set foldenable foldmethod=indent foldminlines=1 foldlevel=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,7 +134,10 @@ set foldenable foldmethod=indent foldminlines=1 foldlevel=5
 "---------------------------------------------------------------
 " Notes
 "---------------------------------------------------------------
-let g:notes_directory = '~/Documents/Notes'
+" let g:loaded_notes = 1
+let g:notes_directory = '~/Documents/VimNotes'
+let g:notes_indexfile = '~/Documents/VimNotes/.index/index.sqlite3'
+let g:notes_tagsindex = '~/Documents/VimNotes/.index/tags.txt'
 "---------------------------------------------------------------
 " TList
 "---------------------------------------------------------------
@@ -282,7 +285,7 @@ let python_highlight_space_errors = 0
 let python_highlight_indent_errors = 0
 
 " default python modeline
-au filetype python setlocal sw=4 et sts=4 foldmethod=indent tw=140
+au filetype python setlocal sw=4 et sts=4 tw=79
 " trim trailing white space
 au BufWritePre *.py :%s/\s\+$//e
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
