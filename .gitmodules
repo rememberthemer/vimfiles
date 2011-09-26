@@ -38,10 +38,6 @@
 	path = bundle/mru
 	url = git://github.com/vim-scripts/mru.vim.git
 	ignore = dirty
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
-	ignore = dirty
 [submodule "bundle/pep8"]
 	path = bundle/pep8
 	url = git://github.com/nvie/vim-pep8.git
@@ -93,10 +89,6 @@
 [submodule "bundle/pydoc.vim"]
 	path = bundle/pydoc.vim
 	url = git://github.com/fs111/pydoc.vim.git
-	ignore = dirty
-[submodule "bundle/pyflakes-vim"]
-	path = bundle/pyflakes-vim
-	url = git://github.com/kevinw/pyflakes-vim.git
 	ignore = dirty
 [submodule "bundle/AutoClose"]
 	path = bundle/AutoClose
