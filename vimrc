@@ -5,16 +5,16 @@
 set nocompatible      " must be first line
 " The next two lines ensure that the ~/.vim/bundle/ system works
 
-runtime! autoload/pathogen.vim
-silent! call pathogen#runtime_append_all_bundles()
-silent! call pathogen#helptags()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+" silent! call pathogen#runtime_append_all_bundles()
+" silent! call pathogen#helptags()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin on 
-filetype indent on
 syntax on
+filetype plugin indent on
 set autoread
 
 let mapleader=","
@@ -84,11 +84,11 @@ if  has("gui_running")
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
-    set ttyfast
+    " set ttyfast
     " color ab-molokai
     color ab-github
     " cursor color
-    let &t_SI = "\<Esc>]12;yellow\x7"
+    let &t_SI = "\<Esc>]12;red\x7"
     let &t_EI = "\<Esc>]12;chocolate\x7"
     autocmd VimLeave * :!echo -ne "\033]12;chocolate\007"
 else
