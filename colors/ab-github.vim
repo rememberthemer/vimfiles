@@ -68,7 +68,7 @@ let s:colors256 = [
             \ ["WildMenu",        "bold",      "228", "166", "",          "" ],
             \ ["LineNr",          "",          "245", "252", "",          "" ],
             \ ["VertSplit",       "",          "243", "252", "",          "" ],
-            \ ["Folded",          "bold",      "243", "252", "",          "" ],
+            \ ["Folded",          "bold",      "53",  "248", "",          "" ],
             \ ["FoldColumn",      "bold",      "89",  "252", "",          "" ],
             \ ["DiffText",        "",          "17",  "253", "",          "" ],
             \ ["DiffDelete",      "",          "124", "225", "",          "" ],
@@ -118,7 +118,7 @@ let s:colors256 = [
 
 " Colors for guionly only {{{1
 " use standard html color numbers/names
-" format:     ["name",			gui,			guifg,	guibg	guisp	]
+" format:     ["name", gui, guifg, guibg, guisp]
 let s:colorgui = [ 
             \ ["SpellBad",   "undercurl", "", "",        "#0087ff" ],
             \ ["SpellRare",  "undercurl", "", "",        "#00af00" ],
@@ -146,18 +146,16 @@ hi link shVariable           Function
 hi link bashSpecialVariables Constant
 
 hi link pythonOperator       Statement
-hi link pythoniUniStringT    pythonStringT
-hi link pythoniRawStringT    pythonStringT
-hi link pythoniUniRawStringT pythonStringT
+
 " }}}
 
 "============================================================
 "        * NO NEED * to edit below (unless bugfixing)
 "============================================================
 
-" {{{ cterm 2 gui color translation array
-" convert between 0-255 cterm range and html spec for gui args
-let s:cmap =   [ 
+" cterm 2 gui color translation array
+" convert between 0-255 cterm range and html spec for gui args {{{
+let s:cmap =   [
                 \ "#000000", "#800000", "#008000", "#808000", 
                 \ "#000080", "#800080", "#008080", "#c0c0c0", 
                 \ "#808080", "#ff0000", "#00ff00", "#ffff00", 
@@ -213,7 +211,6 @@ function! s:ctermtogui(arg)
     endif
 endfunction
 " }}}
-
 
 
 " {{{
