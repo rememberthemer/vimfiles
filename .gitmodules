@@ -86,3 +86,7 @@
 	path = bundle/vim-notes
 	url = git://github.com/xolox/vim-notes.git
 	ignore = dirty
+[submodule "bundle/UltiSnips"]
+	path = bundle/UltiSnips
+	url = git://github.com/vim-scripts/UltiSnips.git
+	ignore = dirty
