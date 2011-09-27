@@ -86,10 +86,6 @@
 	path = bundle/pydoc.vim
 	url = git://github.com/fs111/pydoc.vim.git
 	ignore = dirty
-[submodule "bundle/AutoClose"]
-	path = bundle/AutoClose
-	url = git://github.com/vim-scripts/AutoClose.git
-	ignore = dirty
 [submodule "bundle/AutomaticLaTexPlugin"]
 	path = bundle/AutomaticLaTexPlugin
 	url = git://github.com/vim-scripts/AutomaticLaTexPlugin.git
