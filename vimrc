@@ -300,7 +300,8 @@ au FileType help set nonumber      " no line numbers when viewing help
 au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
-au filetype sh setlocal sw=4 et sts=4 foldmethod=indent
+au filetype python setlocal sw=4 et sts=4 tw=79
+au filetype sh setlocal sw=4 et sts=4 foldmethod=expr
 
 " arch PKGBUILD
 au BufRead,BufNewFile *PKGBUILD setlocal ft=sh
