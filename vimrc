@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Environment
+" ENVIRONMENT {{{ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible      " must be first line
@@ -7,11 +7,9 @@ set nocompatible      " must be first line
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
-" silent! call pathogen#runtime_append_all_bundles()
-" silent! call pathogen#helptags()
-
+" }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General
+" GENERAL "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 filetype plugin indent on
@@ -68,14 +66,16 @@ set shell=/bin/bash
 "modeline stuff
 set modeline
 " let g:secure_modelines_verbose = 0
+"}}}
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim UI
+" VIM UI {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors & Stuff
 set background=light
 if  has("gui_running")
-    " color ab-molokai
-    color ab-github
+    color ab-molokai
+    " color ab-github
     " set guifont=Envy\ Code\ R\ 8
     set guifont=Lucida\ Sans\ Typewriter\ 8
     set guicursor+=n-v-c:blinkon0
@@ -95,8 +95,11 @@ elseif &term =~ "xterm"
 else
     color default
 endif
+" }}}
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MISC {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hi ColorColumn guibg=lightgrey ctermbg=lightgrey
 set backspace=eol,start,indent
 set cursorline number numberwidth=4
@@ -126,11 +129,12 @@ set autoindent copyindent shiftround
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 
 "folding
-set foldenable foldmethod=indent foldminlines=1 foldlevel=1
+set foldenable foldminlines=1 foldlevel=1
 
+" }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins
+" PLUGINS {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "---------------------------------------------------------------
 " Notes
@@ -140,7 +144,7 @@ let g:notes_directory = '~/Documents/VimNotes'
 let g:notes_indexfile = '~/Documents/VimNotes/.index/index.sqlite3'
 let g:notes_tagsindex = '~/Documents/VimNotes/.index/tags.txt'
 "---------------------------------------------------------------
-" TList
+" TList 
 "---------------------------------------------------------------
 let Tlist_Use_Right_Window=1
 let g:loaded_taglist=1
@@ -149,7 +153,7 @@ let g:loaded_taglist=1
 "---------------------------------------------------------------
 let g:pep8_args = "--ignore=E501,W391"
 "---------------------------------------------------------------
-" most recently used
+" MRU
 "---------------------------------------------------------------
 let MRU_File = $HOME."/.vim/tmp/vim_mru_files"
 let MRU_Max_Menu_Entries = 20
@@ -169,6 +173,17 @@ let g:C_CodeSnippets=$HOME."/.vim/bundle/c-vim/c-support/codesnippets"
 "uncomment to disable
 "let g:loaded_nerd_comments=1
 let NERDSpaceDelims=1
+
+
+"---------------------------------------------------------------
+" Supertab
+"---------------------------------------------------------------
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabMappingForward = '<c-space>'
+let g:SuperTabMappingBackward = '<s-c-space>'
+" let g:SuperTabMappingForward = '<nul>'
+" let g:SuperTabMappingBackward = '<s-nul>'
+let g:SuperTabLongestEnhanced = 1
 
 "---------------------------------------------------------------
 " Tags
@@ -190,31 +205,6 @@ let NERDTreeBookmarksFile=$HOME."/.vim/tmp/NERDTreeBookmarks"
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeCaseSensitiveSort=1
-
-" close vim when NERDTree  is only buffer
-function! NERDTreeQuit()
-    redir => buffersoutput
-    silent buffers
-    redir END
-    "                     1BufNo  2Mods.     3File           4LineNo
-    let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
-    let windowfound = 0
-
-    for bline in split(buffersoutput, "\n")
-        let m = matchlist(bline, pattern)
-
-        if (len(m) > 0)
-            if (m[2] =~ '..a..')
-                let windowfound = 1
-            endif
-        endif
-    endfor
-
-    if (!windowfound)
-        quitall
-    endif
-endfunction
-autocmd WinEnter * call NERDTreeQuit()
 
 "---------------------------------------------------------------
 " quick-fix-signs
@@ -243,13 +233,18 @@ let g:tex_flavor='latex'
 let b:atp_TexCompiler	= "pdflatex"			
 let b:atp_BibCompiler	= "bibtex"			
 let g:atp_Python = "/usr/bin/python2"
+
+
+
+" }}}
+
 "---------------------------------------------------------------
 " completion
 set completeopt-=preview
 " set completeopt+=menuone
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Functions & keybindings
+" Functions & keybindings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickly switch buffers
 noremap <silent> <C-w><C-right> :bnext<CR>
@@ -272,9 +267,9 @@ map <silent> <F3> :TagbarToggle<CR>
 
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>
-
+"}}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Python Stuff
+" Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tweak python hilighting etc
 au FileType python syn keyword pythonDecorator True None False self
@@ -290,11 +285,12 @@ let python_highlight_space_errors = 0
 let python_highlight_indent_errors = 0
 
 " default python modeline
-au filetype python setlocal sw=4 et sts=4 tw=79
+
 " trim trailing white space
 au BufWritePre *.py :%s/\s\+$//e
+"}}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Other Auto Commands
+" Other Auto Commands "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change Working Directory to that of the current file
 cmap cwd lcd %:p:h
@@ -306,12 +302,12 @@ au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
 au filetype python setlocal sw=4 et sts=4 tw=79
-au filetype sh setlocal sw=4 et sts=4 foldmethod=expr
+au filetype sh setlocal sw=4 et sts=4
+au filetype vim setlocal foldmethod=marker
 
 " arch PKGBUILD
 au BufRead,BufNewFile *PKGBUILD setlocal ft=sh
 
 " reread .vimrc when saved
 au BufWritePost ~/.vimrc   so ~/.vimrc
-
-" vim: set sw=4 sts=4 et ft=vim :
+" }}}
