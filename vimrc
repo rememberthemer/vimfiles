@@ -76,11 +76,12 @@ set background=light
 if  has("gui_running")
     " color ab-molokai
     color ab-github
-    set guifont=Envy\ Code\ R\ 10
+    " set guifont=Envy\ Code\ R\ 8
+    set guifont=Lucida\ Sans\ Typewriter\ 8
     set guicursor+=n-v-c:blinkon0
     " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
-    set lines=45 columns=100 linespace=2
+    set lines=45 columns=100 linespace=3
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
@@ -142,6 +143,7 @@ let g:notes_tagsindex = '~/Documents/VimNotes/.index/tags.txt'
 " TList
 "---------------------------------------------------------------
 let Tlist_Use_Right_Window=1
+let g:loaded_taglist=1
 "---------------------------------------------------------------
 " pep8
 "---------------------------------------------------------------
@@ -173,6 +175,9 @@ let NERDSpaceDelims=1
 "---------------------------------------------------------------
 " set tags=./tags,/
 let g:easytags_file = '~/.vim/tags/tags'
+" let g:easytags_dynamic_files = 1
+let g:easytags_by_filetype = '~/.vim/tags'
+
 "---------------------------------------------------------------
 " NERDTree
 "---------------------------------------------------------------
@@ -180,7 +185,7 @@ let g:easytags_file = '~/.vim/tags/tags'
 let NERDChristmasTree=1
 let NERDTreeMouseMode=2
 " Store the bookmarks file in perforce
-let NERDTreeBookmarksFile=$HOME."/.vim/tmp/.NERDTreeBookmarks"
+let NERDTreeBookmarksFile=$HOME."/.vim/tmp/NERDTreeBookmarks"
 " Show the bookmarks table on startup
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
@@ -215,7 +220,7 @@ autocmd WinEnter * call NERDTreeQuit()
 " quick-fix-signs
 "---------------------------------------------------------------
 let g:quickfixsigns_blacklist_buffer = '\.tex$'
-
+let g:quickfixsigns_classes = ['qfl', 'loc', 'vcsdiff', 'breakpoints']
 "---------------------------------------------------------------
 "---------------------------------------------------------------
 " SnipMate
@@ -263,7 +268,7 @@ nnoremap <leader>w :silent !xdg-open <C-R>=escape("<C-R><C-F>", "#?&;\|%")<CR><C
 
 map <C-b> :TSelectBuffer<CR>
 map <silent> <F2> :NERDTreeToggle<CR>
-map <silent> <F3> :TlistToggle<CR>
+map <silent> <F3> :TagbarToggle<CR>
 
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>
