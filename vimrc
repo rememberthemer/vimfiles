@@ -74,20 +74,21 @@ set modeline
 " Colors & Stuff
 set background=light
 if  has("gui_running")
-    color ab-molokai
+    color dullokai
     " color ab-github
     " set guifont=Envy\ Code\ R\ 8
-    set guifont=Lucida\ Sans\ Typewriter\ 8
-    set guicursor+=n-v-c:blinkon0
     " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
+    set guifont=Lucida\ Sans\ Typewriter\ 8
+    set guifont=DejaVu\ Sans\ Mono\ 8
+    set guicursor+=n-v-c:blinkon0
     set lines=45 columns=100 linespace=3
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
     " set ttyfast
-    " color ab-molokai
-    color ab-github
+    color dullokai 
+    " color ab-github
     " cursor color
     let &t_SI = "\<Esc>]12;red\x7"
     let &t_EI = "\<Esc>]12;chocolate\x7"
@@ -174,7 +175,6 @@ let g:C_CodeSnippets=$HOME."/.vim/bundle/c-vim/c-support/codesnippets"
 "let g:loaded_nerd_comments=1
 let NERDSpaceDelims=1
 
-
 "---------------------------------------------------------------
 " Supertab
 "---------------------------------------------------------------
@@ -199,13 +199,12 @@ let g:easytags_by_filetype = '~/.vim/tags'
 "let loaded_nerd_tree=1     "to disable
 let NERDChristmasTree=1
 let NERDTreeMouseMode=2
-" Store the bookmarks file in perforce
 let NERDTreeBookmarksFile=$HOME."/.vim/tmp/NERDTreeBookmarks"
 " Show the bookmarks table on startup
 let NERDTreeShowBookmarks=1
-let NERDTreeShowHidden=1
-let NERDTreeCaseSensitiveSort=1
-
+let NERDTreeShowHidden=0
+let NERDTreeCaseSensitiveSort=0
+let NERDTreeDirArrows=1
 "---------------------------------------------------------------
 " quick-fix-signs
 "---------------------------------------------------------------
@@ -311,3 +310,4 @@ au BufRead,BufNewFile *PKGBUILD setlocal ft=sh
 " reread .vimrc when saved
 au BufWritePost ~/.vimrc   so ~/.vimrc
 " }}}
+" vim: set sw=4 sts foldmethod=marker
