@@ -56,8 +56,8 @@ hi SpecialComment  guifg=#8A8A8A ctermfg=245 gui=bold cterm=bold
 hi Question        guifg=#66D9EF ctermfg=81
 hi Underlined      guifg=#808080 ctermfg=244 gui=underline cterm=underline
 hi MatchParen      guifg=#000000 guibg=#FD971F ctermfg=16  ctermbg=208 gui=bold cterm=bold
-hi Search          guifg=#FFFFFF guibg=#455354 ctermfg=253 ctermbg=66
-hi IncSearch       guifg=#C4BE89 guibg=#000000 ctermfg=193 ctermbg=16
+hi Search          guibg=#6ECC98 guifg=#000000 ctermbg=193 ctermfg=16 term=none cterm=none gui=none
+hi IncSearch       guibg=#C4BE89 guifg=#000000 ctermbg=193 ctermfg=16 term=none cterm=none gui=none
 
 if has("spell")
     hi SpellBad    guisp=#FF0000 gui=undercurl
@@ -84,8 +84,8 @@ hi MoreMsg         guifg=#E6DB74 ctermfg=229
 hi ModeMsg         guifg=#E6DB74 ctermfg=229
 
 hi SignColumn      guifg=#A6E22E guibg=#232526 ctermfg=112 ctermbg=235
-hi FoldColumn      guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234 gui=bold cterm=bold
-hi Folded          guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234 gui=bold cterm=bold
+hi FoldColumn      guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234
+hi Folded          guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234
 
 hi Cursor          guifg=#000000 guibg=#F8F8F0 ctermfg=0 ctermbg=230
 hi CursorLine      guibg=#3E3D32 ctermbg=237
