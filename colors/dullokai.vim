@@ -34,7 +34,7 @@ hi Operator        guifg=#F92672 ctermfg=198
 hi Statement       guifg=#F92672 ctermfg=198 gui=bold cterm=bold
 hi Tag             guifg=#F92672 ctermfg=198 gui=italic cterm=underline
 hi Identifier      guifg=#FD971F ctermfg=208
-hi Error           guifg=#960050 guibg=#1E0010 ctermfg=219 ctermbg=89
+hi Error           guifg=#E83036 guibg=#000000 ctermfg=160 ctermbg=0 gui=bold cterm=bold
 hi PreProc         guifg=#A6E22E ctermfg=112
 hi StorageClass    guifg=#FD971F ctermfg=208
 " }}}
@@ -56,8 +56,8 @@ hi SpecialComment  guifg=#8A8A8A ctermfg=245 gui=bold cterm=bold
 hi Question        guifg=#66D9EF ctermfg=81
 hi Underlined      guifg=#808080 ctermfg=244 gui=underline cterm=underline
 hi MatchParen      guifg=#000000 guibg=#FD971F ctermfg=16  ctermbg=208 gui=bold cterm=bold
-hi Search          guibg=#6ECC98 guifg=#000000 ctermbg=193 ctermfg=16 term=none cterm=none gui=none
-hi IncSearch       guibg=#C4BE89 guifg=#000000 ctermbg=193 ctermfg=16 term=none cterm=none gui=none
+hi Search          guifg=#000000 guibg=#EAC925 ctermfg=16 ctermbg=193 cterm=reverse,bold gui=reverse,bold
+hi IncSearch       guifg=#000000 guibg=#C4BE89 ctermfg=16 ctermbg=193 cterm=none gui=none
 
 if has("spell")
     hi SpellBad    guisp=#FF0000 gui=undercurl
@@ -76,8 +76,8 @@ hi VertSplit       guifg=#808080 guibg=#080808 ctermfg=244 ctermbg=232 gui=bold 
 hi VisualNOS       guibg=#121212 ctermbg=233
 hi Visual          guibg=#121212 ctermbg=233
 hi WildMenu        guifg=#66D9EF guibg=#000000 ctermfg=81  ctermbg=16
-hi StatusLine      guifg=#455354 guibg=fg ctermfg=145 ctermbg=237
-hi StatusLineNC    guifg=#808080 guibg=#080808 ctermfg=244 ctermbg=232
+hi StatusLine      guifg=#bcbcbc guibg=#594D56 ctermbg=145 ctermfg=237 gui=bold cterm=bold
+hi StatusLineNC    guifg=#808080 guibg=#3B3A32 ctermbg=244 ctermfg=232 gui=bold cterm=bold
 hi ErrorMsg        guifg=#F92672 guibg=#232526 ctermfg=199 ctermbg=16 gui=bold cterm=bold
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 ctermfg=231 ctermbg=238 gui=bold cterm=bold
 hi MoreMsg         guifg=#E6DB74 ctermfg=229
@@ -88,7 +88,7 @@ hi FoldColumn      guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234
 hi Folded          guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234
 
 hi Cursor          guifg=#000000 guibg=#F8F8F0 ctermfg=0 ctermbg=230
-hi CursorLine      guibg=#3E3D32 ctermbg=237
+hi CursorLine      guibg=#3E3D32 ctermbg=237 cterm=none
 hi CursorColumn    guibg=#3E3D32 ctermbg=237
 hi ColorColumn     guibg=#3B0000 ctermbg=52
 hi LineNr          guifg=#BCBCBC guibg=#3B3A32 ctermfg=250 ctermbg=237
