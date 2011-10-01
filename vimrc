@@ -54,8 +54,7 @@ endif
 
 " Backups
 set nobackup
-" set noswapfile
-set backupdir=$HOME/.vim/tmp/backup
+
 set directory=$HOME/.vim/tmp/swap
 set viewdir=$HOME/.vim/tmp/views
 " make vim save view (state) (folds, cursor, etc)
@@ -74,21 +73,30 @@ set modeline
 " Colors & Stuff
 set background=light
 if  has("gui_running")
-    color dullokai
-    " color ab-github
+    try
+        " color ab-github
+        color dullokai
+    catch /^Vim\%((\a\+)\)\=:E185/
+        color default
+    endtry
     " set guifont=Envy\ Code\ R\ 8
     " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
+    " set guifont=Ubuntu\ Mono\ 10
     set guifont=Lucida\ Sans\ Typewriter\ 8
-    set guifont=DejaVu\ Sans\ Mono\ 8
+    " set guifont=DejaVu\ Sans\ Mono\ 8
     set guicursor+=n-v-c:blinkon0
-    set lines=45 columns=100 linespace=3
+    set lines=55 columns=100 linespace=3
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
     " set ttyfast
-    color dullokai 
-    " color ab-github
+    try
+        " color ab-github
+        color dullokai
+    catch /^Vim\%((\a\+)\)\=:E185/
+        color default
+    endtry
     " cursor color
     let &t_SI = "\<Esc>]12;red\x7"
     let &t_EI = "\<Esc>]12;chocolate\x7"
@@ -105,7 +113,7 @@ endif
 set backspace=eol,start,indent
 set cursorline number numberwidth=4
 set nowrap wrapscan whichwrap=b,s,h,l,<,>,~,[,]
-set scrolloff=7
+set scrolloff=7 sidescrolloff=5
 set magic
 
 " Message & Status Stuff
@@ -130,7 +138,12 @@ set autoindent copyindent shiftround
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 
 "folding
-set foldenable foldminlines=1 foldlevel=1
+set foldenable foldminlines=1 foldlevel=1 foldlevelstart=1
+
+"---------------------------------------------------------------
+" completion
+set completeopt-=preview
+" set completeopt+=menuone
 
 " }}}
 
@@ -236,11 +249,6 @@ let g:atp_Python = "/usr/bin/python2"
 
 
 " }}}
-
-"---------------------------------------------------------------
-" completion
-set completeopt-=preview
-" set completeopt+=menuone
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions & keybindings {{{
