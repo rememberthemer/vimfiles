@@ -1,0 +1,33 @@
+# bashrc for running sh under gvim
+# no colors and simple prompt
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+export PS1='[VIM]\h:\w\$ '
+
+# colourful manpages
+
+# #names for dpkg's
+export DEBFULLNAME="The Mer"
+export DEBEMAIL="rememberthemer@gmail.com"
+export BROWSER=chromium
+
+# Alias definitions.
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias df='df -h'
+alias du='du -c -h'
+alias du1='du --max-depth=1'
+
+
+# vim: ft=sh:
