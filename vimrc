@@ -61,7 +61,10 @@ set viewdir=$HOME/.vim/tmp/views
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
+
+
 set shell=/bin/bash
+
 "modeline stuff
 set modeline
 " let g:secure_modelines_verbose = 0
@@ -98,9 +101,9 @@ elseif &term =~ "xterm"
         color default
     endtry
     " cursor color
-    let &t_SI = "\<Esc>]12;red\x7"
-    let &t_EI = "\<Esc>]12;chocolate\x7"
-    autocmd VimLeave * :!echo -ne "\033]12;chocolate\007"
+    let &t_SI = "\<Esc>]12;Orange Red\x7"
+    let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
+    autocmd VimLeave * :!echo -ne "\033]12;Dark Cyan\007"
 else
     color default
 endif
