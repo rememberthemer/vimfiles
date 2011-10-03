@@ -47,10 +47,10 @@ hi DiffDelete      guifg=#960050 guibg=#1E0010 ctermfg=162 ctermbg=53
 hi DiffText        guibg=#4C4745 ctermbg=102 gui=italic,bold cterm=bold
 
 hi Ignore          guifg=#808080 ctermfg=244
-hi Macro           guifg=#C4BE89 ctermfg=193 gui=italic cterm=underline
+hi Macro           guifg=#C4BE89 ctermfg=193 gui=italic cterm=bold
 hi Todo            guifg=#FFFFFF guibg=#5f0000 ctermfg=15 ctermbg=52 gui=bold cterm=bold
-hi Special         guifg=#66D9EF ctermfg=81 gui=italic cterm=underline
-hi SpecialKey      guifg=#888A85 ctermfg=245 gui=italic cterm=underline
+hi Special         guifg=#66D9EF ctermfg=81 gui=italic cterm=bold
+hi SpecialKey      guifg=#888A85 ctermfg=245 gui=italic cterm=bold
 hi SpecialChar     guifg=#F92672 ctermfg=198 gui=bold cterm=bold
 hi SpecialComment  guifg=#8A8A8A ctermfg=245 gui=bold cterm=bold
 hi Question        guifg=#66D9EF ctermfg=81
@@ -76,16 +76,16 @@ hi VertSplit       guifg=#808080 guibg=#080808 ctermfg=244 ctermbg=232 gui=bold 
 hi VisualNOS       guibg=#121212 ctermbg=233
 hi Visual          guibg=#121212 ctermbg=233
 hi WildMenu        guifg=#66D9EF guibg=#000000 ctermfg=81  ctermbg=16
-hi StatusLine      guifg=#bcbcbc guibg=#594D56 ctermbg=145 ctermfg=237 gui=bold cterm=bold
-hi StatusLineNC    guifg=#808080 guibg=#3B3A32 ctermbg=244 ctermfg=232 gui=bold cterm=bold
-hi ErrorMsg        guifg=#F92672 guibg=#232526 ctermfg=199 ctermbg=16 gui=bold cterm=bold
+hi StatusLine      guifg=#bcbcbc guibg=#465457 ctermfg=237 ctermbg=145 ctermfg=237 gui=bold cterm=bold
+hi StatusLineNC    guifg=#c6c6c6 guibg=#585858 ctermfg=235 ctermbg=244 gui=bold cterm=bold
+hi ErrorMsg        guifg=#F92672 guibg=#232526 ctermfg=199 ctermbg=16  gui=bold cterm=bold
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 ctermfg=231 ctermbg=238 gui=bold cterm=bold
 hi MoreMsg         guifg=#E6DB74 ctermfg=229
 hi ModeMsg         guifg=#E6DB74 ctermfg=229
 
 hi SignColumn      guifg=#A6E22E guibg=#232526 ctermfg=112 ctermbg=235
-hi FoldColumn      guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234
-hi Folded          guifg=#BCBCBC guibg=#465457 ctermfg=250 ctermbg=234
+hi FoldColumn      guifg=#BCBCBC guibg=#303030 ctermfg=250 ctermbg=236
+hi Folded          guifg=#BCBCBC guibg=#303030 ctermfg=250 ctermbg=236 gui=bold cterm=bold
 
 hi Cursor          guifg=#000000 guibg=#F8F8F0 ctermfg=0 ctermbg=230
 hi CursorLine      guibg=#3E3D32 ctermbg=237 cterm=none
