@@ -19,7 +19,7 @@ set background=dark
 let g:colors_name="dullokai"
 
 " {{{ CODE COLORS ======================
-hi Normal          guifg=#dadada guibg=#444444 ctermfg=253 ctermbg=238
+hi Normal          guifg=#dadada guibg=#444440 ctermfg=253 ctermbg=238
 hi NonText         guifg=#BCBCBC guibg=#3B3A32 ctermfg=250 ctermbg=237
 hi Comment         guifg=#8B8778 ctermfg=245
 hi String          guifg=#E6DB74 ctermfg=185
@@ -41,7 +41,7 @@ hi StorageClass    guifg=#FD971F ctermfg=208
 
 "{{{ OTHER SHIT =============================
 
-hi DiffAdd         guibg=#13354A ctermbg=24
+hi DiffAdd         guibg=#13354A ctermbg=23
 hi DiffChange      guifg=#89807D guibg=#4C4745 ctermfg=181 ctermbg=239
 hi DiffDelete      guifg=#960050 guibg=#1E0010 ctermfg=162 ctermbg=53
 hi DiffText        guibg=#4C4745 ctermbg=102 gui=italic,bold cterm=bold
