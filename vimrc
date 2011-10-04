@@ -62,8 +62,11 @@ au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
 
-
-set shell=/bin/bash
+if has("gui_running")
+    set shell=/bin/bash\ --rcfile\ ~/.vim/bashrc.gvim
+else
+    set shell=/bin/bash
+endif
 
 "modeline stuff
 set modeline
@@ -78,25 +81,28 @@ set background=light
 if  has("gui_running")
     try
         " color ab-github
-        color dullokai
+	color dullokai
+        " color proton
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    " set guifont=Envy\ Code\ R\ 8
+    " set guifont=Envy\ Code\ R\ 9
     " set guifont=Dina\ 12
     " set guifont=Tamsyn\ 11
     " set guifont=Ubuntu\ Mono\ 10
-    set guifont=Lucida\ Sans\ Typewriter\ 8
-    " set guifont=DejaVu\ Sans\ Mono\ 8
+    " set guifont=Lucida\ Sans\ Typewriter\ 8
+    set guifont=Liberation\ Mono\ 8 linespace=2
+    " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
-    set lines=55 columns=100 linespace=3
+    set lines=55 columns=100
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
     " set ttyfast
     try
         " color ab-github
-        color dullokai
+	color dullokai
+        " color proton
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry

@@ -40,9 +40,9 @@ hi StorageClass    guifg=#FD971F ctermfg=208
 " }}}
 
 "{{{ OTHER SHIT =============================
-
-hi DiffAdd         guibg=#13354A ctermbg=23
-hi DiffChange      guifg=#89807D guibg=#4C4745 ctermfg=181 ctermbg=239
+" TODO: adjust colors for Folding in cterm
+hi Diffadd         guifg=#397541 guibg=#061E00 ctermbg=23
+hi DiffChange      guifg=#919CBB guibg=#091126 ctermfg=181 ctermbg=239
 hi DiffDelete      guifg=#960050 guibg=#1E0010 ctermfg=162 ctermbg=53
 hi DiffText        guibg=#4C4745 ctermbg=102 gui=italic,bold cterm=bold
 
@@ -69,6 +69,7 @@ endif
 hi Title           guifg=#ef5939 ctermfg=16
 hi Directory       guifg=#A6E22E ctermfg=112 gui=bold cterm=bold
 
+" test
 "}}}
 
 " {{{ UI UGLIFICATION ==============
@@ -83,10 +84,9 @@ hi WarningMsg      guifg=#FFFFFF guibg=#333333 ctermfg=231 ctermbg=238 gui=bold 
 hi MoreMsg         guifg=#E6DB74 ctermfg=229
 hi ModeMsg         guifg=#E6DB74 ctermfg=229
 
-hi SignColumn      guifg=#A6E22E guibg=#232526 ctermfg=112 ctermbg=235
-hi FoldColumn      guifg=#BCBCBC guibg=#303030 ctermfg=250 ctermbg=236
-hi Folded          guifg=#BCBCBC guibg=#303030 ctermfg=250 ctermbg=236 gui=bold cterm=bold
-
+hi SignColumn      guifg=#A6E22E guibg=#232526 ctermfg=112 ctermbg=235 gui=none cterm=none
+hi FoldColumn      guifg=#BCBCBC guibg=#303030 ctermfg=250 ctermbg=236 gui=none cterm=none
+hi Folded          guifg=#67798C guibg=#323D48 ctermfg=250 ctermbg=236 gui=none cterm=none
 hi Cursor          guifg=#000000 guibg=#F8F8F0 ctermfg=0 ctermbg=230
 hi CursorLine      guibg=#3E3D32 ctermbg=237 cterm=none
 hi CursorColumn    guibg=#3E3D32 ctermbg=237
