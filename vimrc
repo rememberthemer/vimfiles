@@ -194,7 +194,7 @@ let NERDSpaceDelims=1
 "---------------------------------------------------------------
 " Supertab
 "---------------------------------------------------------------
-let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabMappingForward = '<c-space>'
 let g:SuperTabMappingBackward = '<s-c-space>'
 " let g:SuperTabMappingForward = '<nul>'
