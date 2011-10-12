@@ -5,7 +5,7 @@ if [ $(git status -s | wc -l) -ne 0 ]; then
     exit 1
 fi
 
-git submodule foreach "git pull origin master"
+git submodule foreach "(git pull origin master && git gc)"
 
 if [ -n "$(git status -s | grep ' M bundle/')" ]; then
     git commit -a -m "bundle update"
