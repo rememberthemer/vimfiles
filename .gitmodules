@@ -26,10 +26,6 @@
 	path = bundle/cpp-vim
 	url = git://github.com/vim-scripts/cpp.vim--Skvirsky.git
 	ignore = dirty
-[submodule "bundle/grep"]
-	path = bundle/grep
-	url = git://github.com/vim-scripts/grep.vim.git
-	ignore = dirty
 [submodule "bundle/mru"]
 	path = bundle/mru
 	url = git://github.com/vim-scripts/mru.vim.git
