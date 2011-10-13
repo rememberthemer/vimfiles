@@ -10,10 +10,6 @@
 	path = bundle/checksyntax_vim
 	url = git://github.com/tomtom/checksyntax_vim.git
 	ignore = dirty
-[submodule "bundle/tselectbuffer_vim"]
-	path = bundle/tselectbuffer_vim
-	url = git://github.com/tomtom/tselectbuffer_vim.git
-	ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
