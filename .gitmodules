@@ -70,10 +70,6 @@
 	path = bundle/vim-easytags
 	url = git://github.com/xolox/vim-easytags.git
 	ignore = dirty
-[submodule "bundle/vim-notes"]
-	path = bundle/vim-notes
-	url = git://github.com/xolox/vim-notes.git
-	ignore = dirty
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
