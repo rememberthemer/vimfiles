@@ -20,7 +20,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 git submodule init
-git submodule update
+# git submodule update
 git config --file=.gitmodules submodule.${bundlename}.ignore dirty
 git add .gitmodules
 git commit -m "$bundlename added"

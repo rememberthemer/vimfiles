@@ -1,3 +1,4 @@
+" vim: set sw=4 sts foldmethod=marker
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ENVIRONMENT {{{ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -7,6 +8,7 @@ set nocompatible      " must be first line
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -82,16 +84,13 @@ if  has("gui_running")
     try
         " color ab-github
 	color dullokai
-        " color proton
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
     " set guifont=Envy\ Code\ R\ 9
-    " set guifont=Dina\ 12
-    " set guifont=Tamsyn\ 11
-    " set guifont=Ubuntu\ Mono\ 10
-    " set guifont=Lucida\ Sans\ Typewriter\ 8
-    set guifont=Liberation\ Mono\ 8 linespace=2
+    " set guifont=Dina\ 12 linespace=2
+    " set guifont=Lucida\ Sans\ Typewriter\ 8 linespace=2
+    set guifont=Liberation\ Mono\ 8 linespace=3
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
     set lines=55 columns=100
@@ -118,7 +117,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" hi ColorColumn guibg=lightgrey ctermbg=lightgrey
 set backspace=eol,start,indent
 set cursorline number numberwidth=4
 set nowrap wrapscan whichwrap=b,s,h,l,<,>,~,[,]
@@ -140,8 +138,8 @@ nnoremap <silent> <CR> :noh<CR><CR>
 " misc
 set nolist listchars=tab:\|-,trail:.,extends:>,precedes:<
 set nolazyredraw
+set ttyfast
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Formatting
 set autoindent copyindent shiftround
 set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
@@ -149,7 +147,6 @@ set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 "folding
 set foldenable foldminlines=1 foldlevel=1 foldlevelstart=1
 
-"---------------------------------------------------------------
 " completion
 set completeopt-=preview
 " set completeopt+=menuone
@@ -159,18 +156,6 @@ set completeopt-=preview
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"---------------------------------------------------------------
-" Notes
-"---------------------------------------------------------------
-" let g:loaded_notes = 1
-let g:notes_directory = '~/Documents/VimNotes'
-let g:notes_indexfile = '~/Documents/VimNotes/.index/index.sqlite3'
-let g:notes_tagsindex = '~/Documents/VimNotes/.index/tags.txt'
-"---------------------------------------------------------------
-" TList 
-"---------------------------------------------------------------
-let Tlist_Use_Right_Window=1
-let g:loaded_taglist=1
 "---------------------------------------------------------------
 " pep8
 "---------------------------------------------------------------
@@ -237,7 +222,7 @@ let NERDTreeDirArrows=1
 "---------------------------------------------------------------
 let g:quickfixsigns_blacklist_buffer = '\.tex$'
 let g:quickfixsigns_classes = ['qfl', 'loc', 'vcsdiff', 'breakpoints']
-"---------------------------------------------------------------
+
 "---------------------------------------------------------------
 " SnipMate
 "---------------------------------------------------------------
@@ -247,7 +232,15 @@ let g:snips_copyright = g:snips_company
 " let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
 
 "---------------------------------------------------------------
+" Gundo
+"---------------------------------------------------------------
+nnoremap <F4> :GundoToggle<CR>
+let g:gundo_width = 60
+let g:gundo_preview_height = 40
+
+"---------------------------------------------------------------
 " Latex stuff
+"---------------------------------------------------------------
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 " TIP: if you write your \label's as \label{fig:something}, then if you
@@ -260,8 +253,6 @@ let g:tex_flavor='latex'
 let b:atp_TexCompiler	= "pdflatex"			
 let b:atp_BibCompiler	= "bibtex"			
 let g:atp_Python = "/usr/bin/python2"
-
-
 
 " }}}
 
@@ -290,6 +281,7 @@ map <silent> <F3> :TagbarToggle<CR>
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>
 "}}}
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -303,12 +295,12 @@ let python_highlight_string_formatting = 1
 let python_highlight_string_format = 1
 let python_highlight_string_templates = 1
 let python_highlight_doctests = 1
-let python_highlight_space_errors = 0
+let python_highlight_space_errors = 1
 let python_highlight_indent_errors = 0
 
-" default python modeline
 
 " trim trailing white space
+au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80
 au BufWritePre *.py :%s/\s\+$//e
 "}}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -323,14 +315,9 @@ au FileType help set nonumber      " no line numbers when viewing help
 au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
-au filetype python setlocal sw=4 et sts=4 tw=79
 au filetype sh setlocal sw=4 et sts=4
 au filetype vim setlocal foldmethod=marker
-
-" arch PKGBUILD
-au BufRead,BufNewFile *PKGBUILD setlocal ft=sh
 
 " reread .vimrc when saved
 au BufWritePost ~/.vimrc   so ~/.vimrc
 " }}}
-" vim: set sw=4 sts foldmethod=marker
