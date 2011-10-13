@@ -102,3 +102,7 @@
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = dirty
+[submodule "bundle/minibufexpl.vim"]
+	path = bundle/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+	ignore = dirty
