@@ -98,3 +98,7 @@
 	path = bundle/pylint-mode
 	url = https://github.com/vim-scripts/pylint-mode.git
 	ignore = dirty
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+	ignore = dirty
