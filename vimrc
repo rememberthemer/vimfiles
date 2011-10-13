@@ -218,6 +218,7 @@ let g:SuperTabLongestEnhanced = 1
 let g:easytags_file = '~/.vim/tags/tags'
 let g:easytags_dynamic_files = 1
 " let g:easytags_by_filetype = '~/.vim/tags'
+let g:easytags_on_cursorhold = 0
 
 "---------------------------------------------------------------
 " NERDTree
