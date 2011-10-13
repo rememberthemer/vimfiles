@@ -94,3 +94,7 @@
 	path = bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim.git
 	ignore = dirty
+[submodule "bundle/pylint-mode"]
+	path = bundle/pylint-mode
+	url = https://github.com/vim-scripts/pylint-mode.git
+	ignore = dirty
