@@ -74,10 +74,6 @@
 	path = bundle/AutomaticLaTexPlugin
 	url = git://github.com/vim-scripts/AutomaticLaTexPlugin.git
 	ignore = dirty
-[submodule "bundle/rtm-snipmate.vim"]
-	path = bundle/rtm-snipmate.vim
-	url = git@github.com:rememberthemer/rtm-snipmate.vim.git
-	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
