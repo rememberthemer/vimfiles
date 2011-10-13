@@ -102,3 +102,7 @@
 	path = bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
 	ignore = dirty
+[submodule "bundle/rtm-snipmate.vim"]
+	path = bundle/rtm-snipmate.vim
+	url = git://github.com/rememberthemer/rtm-snipmate.vim.git
+	ignore = dirty
