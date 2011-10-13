@@ -176,6 +176,10 @@ let g:loaded_taglist=1
 "---------------------------------------------------------------
 let g:pep8_args = "--ignore=E501,W391"
 "---------------------------------------------------------------
+" pydoc
+"---------------------------------------------------------------
+let g:pydoc_cmd = "pydoc2"
+"---------------------------------------------------------------
 " MRU
 "---------------------------------------------------------------
 let MRU_File = $HOME."/.vim/tmp/vim_mru_files"
@@ -250,6 +254,7 @@ let g:tex_flavor='latex'
 " all the figure labels. Very useful!
 " set iskeyword+=:
 
+"---------------------------------------------------------------
 " ATP plugin
 let b:atp_TexCompiler	= "pdflatex"			
 let b:atp_BibCompiler	= "bibtex"			
