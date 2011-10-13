@@ -106,3 +106,7 @@
 	path = bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim.git
 	ignore = dirty
+[submodule "bundle/pylint.vim"]
+	path = bundle/pylint.vim
+	url = https://github.com/vim-scripts/pylint.vim.git
+	ignore = dirty
