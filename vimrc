@@ -185,7 +185,10 @@ let g:C_CodeSnippets=$HOME."/.vim/bundle/c-vim/c-support/codesnippets"
 "uncomment to disable
 "let g:loaded_nerd_comments=1
 let NERDSpaceDelims=1
-
+" custom maps
+let g:NERDCustomDelimiters = {
+			\ 'PKGBUILD': { 'left': '#'}
+			\ }
 "---------------------------------------------------------------
 " Supertab
 "---------------------------------------------------------------
