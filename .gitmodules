@@ -1,7 +1,3 @@
-[submodule "bundle/quickfixsigns_vim"]
-	path = bundle/quickfixsigns_vim
-	url = git://github.com/tomtom/quickfixsigns_vim.git
-	ignore = dirty
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = git://github.com/tomtom/tlib_vim.git
