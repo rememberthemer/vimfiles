@@ -60,8 +60,8 @@ set nobackup
 set directory=$HOME/.vim/tmp/swap
 set viewdir=$HOME/.vim/tmp/views
 " make vim save view (state) (folds, cursor, etc)
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
+" au BufWinLeave * silent! mkview
+" au BufWinEnter * silent! loadview
 
 
 if has("gui_running")
@@ -72,7 +72,7 @@ endif
 
 "modeline stuff
 set modeline
-" let g:secure_modelines_verbose = 0
+
 "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,16 +99,14 @@ elseif &term =~ "xterm"
     set t_Co=256
     " set ttyfast
     try
-        " color ab-github
 	color dullokai
-        " color proton
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
     " cursor color
-    let &t_SI = "\<Esc>]12;Orange Red\x7"
-    let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
-    autocmd VimLeave * :!echo -ne "\033]12;Dark Cyan\007"
+let &t_SI = "\<Esc>]12;White\x7"
+let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
+    autocmd VimLeave * :!echo -ne "\033]12;Medium Aquamarine\007"
 else
     color default
 endif
@@ -125,6 +123,7 @@ set magic
 
 " Message & Status Stuff
 set showmode showcmd cmdheight=2
+" set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
 set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
 set laststatus=2
 set wildmenu wildmode=list:longest " turn on wild mode huge list
@@ -164,6 +163,10 @@ let g:pep8_args = "--ignore=E501,W391"
 " pydoc
 "---------------------------------------------------------------
 let g:pydoc_cmd = "pydoc2"
+"---------------------------------------------------------------
+" pylint
+"---------------------------------------------------------------
+let g:PyLintOnWrite = 1
 "---------------------------------------------------------------
 " MRU
 "---------------------------------------------------------------
@@ -221,12 +224,12 @@ let NERDTreeShowHidden=0
 let NERDTreeCaseSensitiveSort=0
 let NERDTreeDirArrows=1
 "---------------------------------------------------------------
-" quick-fix-signs
+" syntastic
 "---------------------------------------------------------------
-let g:quickfixsigns_blacklist_buffer = '\.tex$'
-let g:quickfixsigns_classes = ['qfl', 'loc', 'vcsdiff', 'breakpoints']
-
-"---------------------------------------------------------------
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+" let g:syntastic_quiet_warnings=1
+<"---------------------------------------------------------------
 " SnipMate
 "---------------------------------------------------------------
 let g:snips_author = 'Adrian Benson <Adrian.M.Benson__AT__gmail__DOT__com>'
