@@ -42,10 +42,6 @@
 	path = bundle/Tex9
 	url = git://github.com/vim-scripts/TeX-9.git
 	ignore = dirty
-[submodule "bundle/ManPageView"]
-	path = bundle/ManPageView
-	url = https://github.com/vim-scripts/ManPageView.git
-	ignore = dirty
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = git://github.com/xolox/vim-easytags.git
