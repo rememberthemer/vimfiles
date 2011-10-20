@@ -159,14 +159,12 @@ set completeopt-=preview
 " pep8
 "---------------------------------------------------------------
 let g:pep8_args = "--ignore=E501,W391"
+
 "---------------------------------------------------------------
 " pydoc
 "---------------------------------------------------------------
 let g:pydoc_cmd = "pydoc2"
-"---------------------------------------------------------------
-" pylint
-"---------------------------------------------------------------
-let g:PyLintOnWrite = 1
+
 "---------------------------------------------------------------
 " MRU
 "---------------------------------------------------------------
@@ -276,11 +274,14 @@ nmap <silent> <leader>gw :vimgrep /<C-r><C-w>/ %<CR>:ccl<CR>:cwin<CR><C-W>J:set 
 vnoremap < <gv
 vnoremap > >gv
 
-" open with browser http://vim.wikia.com/wiki/VimTip306
-nnoremap <leader>w :silent !xdg-open <C-R>=escape("<C-R><C-F>", "#?&;\|%")<CR><CR>
-
-
-map <C-b> :TSelectBuffer<CR>
+" strip white spaces
+function StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+noremap <silent> <leader>sw :call StripTrailingWhitespaces()<CR>
 map <silent> <F2> :NERDTreeToggle<CR>
 map <silent> <F3> :TagbarToggle<CR>
 
@@ -307,7 +308,7 @@ let python_highlight_indent_errors = 0
 
 " trim trailing white space
 au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80
-au BufWritePre *.py :%s/\s\+$//e
+au BufWritePre *.py :call StripTrailingWhitespaces()
 "}}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other Auto Commands "{{{
