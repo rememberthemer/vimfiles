@@ -60,27 +60,27 @@
 	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
+	url = git://github.com/majutsushi/tagbar.git
 	ignore = dirty
 [submodule "bundle/supertab"]
 	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
+	url = git://github.com/ervandew/supertab.git
 	ignore = dirty
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
-	url = https://github.com/fholgado/minibufexpl.vim.git
+	url = git://github.com/fholgado/minibufexpl.vim.git
 	ignore = dirty
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
+	url = git://github.com/tpope/vim-surround.git
 	ignore = dirty
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
+	url = git://github.com/mileszs/ack.vim.git
 	ignore = dirty
 [submodule "bundle/gundo.vim"]
 	path = bundle/gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
+	url = git://github.com/sjl/gundo.vim.git
 	ignore = dirty
 [submodule "bundle/rtm-snipmate.vim"]
 	path = bundle/rtm-snipmate.vim
@@ -88,5 +88,5 @@
 	ignore = dirty
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+	url = git://github.com/scrooloose/syntastic.git
 	ignore = dirty
