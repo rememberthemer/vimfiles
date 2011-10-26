@@ -247,6 +247,8 @@ let g:gundo_preview_height = 40
 "---------------------------------------------------------------
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_ViewRule_pdf='evince'
 " TIP: if you write your \label's as \label{fig:something}, then if you
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
