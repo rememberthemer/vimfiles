@@ -58,10 +58,6 @@
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
 	ignore = dirty
-[submodule "bundle/minibufexpl.vim"]
-	path = bundle/minibufexpl.vim
-	url = git://github.com/fholgado/minibufexpl.vim.git
-	ignore = dirty
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
