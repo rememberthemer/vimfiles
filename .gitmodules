@@ -78,3 +78,7 @@
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
 	ignore = dirty
+[submodule "bundle/AutomaticLaTexPlugin"]
+	path = bundle/AutomaticLaTexPlugin
+	url = git://github.com/vim-scripts/AutomaticLaTexPlugin.git
+	ignore = dirty
