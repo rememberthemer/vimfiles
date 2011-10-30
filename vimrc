@@ -258,7 +258,7 @@ let g:Tex_ViewRule_pdf='evince'
 " ATP plugin
 let b:atp_TexCompiler	= "pdflatex"			
 let b:atp_BibCompiler	= "bibtex"			
-let g:atp_Python = "/usr/bin/python2"
+let g:atp_Python = "/usr/bin/python2.7"
 
 " }}}
 
