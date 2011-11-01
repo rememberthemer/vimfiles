@@ -82,3 +82,7 @@
 	path = bundle/AutomaticLaTexPlugin
 	url = git://github.com/vim-scripts/AutomaticLaTexPlugin.git
 	ignore = dirty
+[submodule "bundle/VST"]
+	path = bundle/VST
+	url = git://github.com/vim-scripts/VST.git
+	ignore = dirty
