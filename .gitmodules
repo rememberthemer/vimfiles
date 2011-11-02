@@ -86,3 +86,7 @@
 	path = bundle/VST
 	url = git://github.com/vim-scripts/VST.git
 	ignore = dirty
+[submodule "bundle/RST-Tables"]
+	path = bundle/RST-Tables
+	url = git://github.com/vim-scripts/RST-Tables.git
+	ignore = dirty
