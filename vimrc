@@ -14,7 +14,8 @@ call pathogen#infect()
 " GENERAL "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 set autoread
 
 let mapleader=","
@@ -60,8 +61,8 @@ set nobackup
 set directory=$HOME/.vim/tmp/swap
 set viewdir=$HOME/.vim/tmp/views
 " make vim save view (state) (folds, cursor, etc)
-" au BufWinLeave * silent! mkview
-" au BufWinEnter * silent! loadview
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
 
 
 if has("gui_running")
@@ -151,7 +152,14 @@ set completeopt-=preview
 " set completeopt+=menuone
 
 " }}}
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OMNIFUNC stuff "{{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+" }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -198,7 +206,7 @@ let g:SuperTabMappingForward = '<c-space>'
 let g:SuperTabMappingBackward = '<s-c-space>'
 " let g:SuperTabMappingForward = '<nul>'
 " let g:SuperTabMappingBackward = '<s-nul>'
-let g:SuperTabLongestEnhanced = 1
+" let g:SuperTabLongestEnhanced = 1
 
 "---------------------------------------------------------------
 " Tags
@@ -330,3 +338,4 @@ au filetype vim setlocal foldmethod=marker
 " reread .vimrc when saved
 au BufWritePost ~/.vimrc   so ~/.vimrc
 " }}}
+
