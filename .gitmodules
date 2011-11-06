@@ -86,7 +86,3 @@
 	path = bundle/RST-Tables
 	url = git://github.com/vim-scripts/RST-Tables.git
 	ignore = dirty
-[submodule "bundle/vim-buffergator"]
-	path = bundle/vim-buffergator
-	url = git://github.com/jeetsukumaran/vim-buffergator.git
-	ignore = dirty
