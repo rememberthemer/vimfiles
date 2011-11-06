@@ -72,6 +72,9 @@ highlight DiffAdd                   guifg=#E6E1DC ctermfg=7 guibg=#519F50 ctermb
 highlight DiffDelete                guifg=#E6E1DC ctermfg=7 guibg=#660000 ctermbg=52
 highlight Special                   guifg=#DA4939 ctermfg=167 
 
+highlight FoldColumn      guifg=#BCBCBC guibg=#303030 ctermfg=250 ctermbg=236 gui=none cterm=none
+highlight Folded          guifg=#67798C guibg=#323D48 ctermfg=250 ctermbg=236 gui=none cterm=none
+
 highlight pythonBuiltin             guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
 highlight rubyBlockParameter        guifg=#FFFFFF ctermfg=15
 highlight rubyClass                 guifg=#FFFFFF ctermfg=15
@@ -95,3 +98,18 @@ highlight SpellBad                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm
 highlight SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 highlight SpellCap                  guifg=#D0D0FF ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 highlight MatchParen                guifg=#FFFFFF ctermfg=15 guibg=#005f5f ctermbg=23
+
+" {{{ LINKED GROUPS
+hi link Boolean         Number
+hi link Character       String
+hi link Conditional     Statement
+hi link Define          Type
+hi link Float           Number
+hi link Keyword         Statement
+hi link Label           String
+hi link Precondit       PreProc
+hi link Repeat          Statement
+hi link Structure       Type
+hi link Typedef         Type
+
+" }}}
