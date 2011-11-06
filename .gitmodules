@@ -86,3 +86,7 @@
 	path = bundle/RST-Tables
 	url = git://github.com/vim-scripts/RST-Tables.git
 	ignore = dirty
+[submodule "bundle/ctrlp.vim"]
+	path = bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
+	ignore = dirty
