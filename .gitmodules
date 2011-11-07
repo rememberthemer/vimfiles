@@ -86,3 +86,7 @@
 	path = bundle/RST-Tables
 	url = git://github.com/vim-scripts/RST-Tables.git
 	ignore = dirty
+[submodule "bundle/lusty"]
+	path = bundle/lusty
+	url = git://github.com/sjbach/lusty.git
+	ignore = dirty
