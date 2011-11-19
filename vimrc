@@ -233,7 +233,7 @@ let NERDTreeDirArrows=1
 " syntastic
 "---------------------------------------------------------------
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=2
 " let g:syntastic_quiet_warnings=1
 <"---------------------------------------------------------------
 " SnipMate
@@ -285,15 +285,17 @@ vnoremap < <gv
 vnoremap > >gv
 
 " strip white spaces
-function StripTrailingWhitespaces()
+function! ABStripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
     %s/\s\+$//e
     call cursor(l, c)
 endfun
-noremap <silent> <leader>sw :call StripTrailingWhitespaces()<CR>
+
+noremap <silent> <leader>sw :call ABStripTrailingWhitespaces()<CR>
 map <silent> <F2> :NERDTreeToggle<CR>
 map <silent> <F3> :TagbarToggle<CR>
+map <silent> <F5> :Errors<CR>
 
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>
@@ -318,7 +320,7 @@ let python_highlight_indent_errors = 0
 
 " trim trailing white space
 au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80
-au BufWritePre *.py :call StripTrailingWhitespaces()
+au BufWritePre *.py :call ABStripTrailingWhitespaces()
 "}}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other Auto Commands "{{{
