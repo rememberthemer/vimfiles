@@ -54,10 +54,6 @@
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
 	ignore = dirty
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-	ignore = dirty
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
