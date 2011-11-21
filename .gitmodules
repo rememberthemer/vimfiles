@@ -86,3 +86,7 @@
 	path = bundle/lusty
 	url = git://github.com/sjbach/lusty.git
 	ignore = dirty
+[submodule "bundle/vim-colorschemes"]
+	path = bundle/vim-colorschemes
+	url = git://github.com/flazz/vim-colorschemes.git
+	ignore = dirty
