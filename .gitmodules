@@ -82,3 +82,7 @@
 	path = bundle/lusty
 	url = git://github.com/sjbach/lusty.git
 	ignore = dirty
+[submodule "bundle/vim-togglelist"]
+	path = bundle/vim-togglelist
+	url = git://github.com/milkypostman/vim-togglelist.git
+	ignore = dirty
