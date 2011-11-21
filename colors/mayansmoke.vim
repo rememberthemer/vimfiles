@@ -82,6 +82,8 @@ else
     hi CursorColumn guifg=NONE              guibg=#FFFDD0       gui=NONE
     hi CursorLine   guifg=NONE              guibg=#FFFDD0       gui=NONE
 endif
+hi CursorLine guifg=NONE              guibg=#EBEBE0       gui=NONE
+
 hi CursorIM     guifg=bg                guibg=fg                gui=NONE
 hi lCursor      guifg=bg                guibg=fg                gui=NONE
 hi DiffAdd      guifg=NONE              guibg=SeaGreen1         gui=NONE

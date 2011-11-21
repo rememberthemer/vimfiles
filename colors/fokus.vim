@@ -58,7 +58,7 @@ hi FoldColumn   gui=NONE guifg=#40a098 guibg=#f0f0f0
 
 " Other
 hi Directory    gui=NONE guifg=#0070b8 guibg=NONE
-hi LineNr       gui=NONE guifg=#acacac guibg=#EBE8DC
+hi LineNr       gui=NONE guifg=#9E9E9E guibg=#E3E0D4
 
 hi NonText      gui=BOLD guifg=#aaaaaa
 hi Pmenu        guifg=#404040 guibg=#FFddF5
