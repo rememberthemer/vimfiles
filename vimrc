@@ -295,7 +295,9 @@ endfun
 noremap <silent> <leader>sw :call ABStripTrailingWhitespaces()<CR>
 map <silent> <F2> :NERDTreeToggle<CR>
 map <silent> <F3> :TagbarToggle<CR>
-map <silent> <F5> :Errors<CR>
+
+
+map <silent> <F5> :call ToggleLocationList()<CR>
 
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>
