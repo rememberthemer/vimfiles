@@ -26,10 +26,6 @@
 	path = bundle/align
 	url = ssh://git@github.com:22/vim-scripts/Align.git
 	ignore = dirty
-[submodule "bundle/OmniCppComplete"]
-	path = bundle/OmniCppComplete
-	url = ssh://git@github.com:22/vim-scripts/OmniCppComplete.git
-	ignore = dirty
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = ssh://git@github.com:22/tpope/vim-fugitive.git
