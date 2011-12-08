@@ -62,10 +62,6 @@
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
 	ignore = dirty
-[submodule "bundle/VST"]
-	path = bundle/VST
-	url = git://github.com/vim-scripts/VST.git
-	ignore = dirty
 [submodule "bundle/lusty"]
 	path = bundle/lusty
 	url = git://github.com/sjbach/lusty.git
