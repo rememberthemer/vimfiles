@@ -83,8 +83,8 @@ set modeline
 set background=light
 if  has("gui_running")
     try
-	" color dullokai
-	color fokus
+	color dullokai
+	" color fokus
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
