@@ -58,10 +58,6 @@
 	path = bundle/syntastic
 	url = ssh://git@github.com:22/scrooloose/syntastic.git
 	ignore = dirty
-[submodule "bundle/VST"]
-	path = bundle/VST
-	url = ssh://git@github.com:22/vim-scripts/VST.git
-	ignore = dirty
 [submodule "bundle/RST-Tables"]
 	path = bundle/RST-Tables
 	url = ssh://git@github.com:22/vim-scripts/RST-Tables.git
