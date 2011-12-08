@@ -10,10 +10,6 @@
 	path = bundle/c-vim
 	url = ssh://git@github.com:22/vim-scripts/c.vim.git
 	ignore = dirty
-[submodule "bundle/cpp-vim"]
-	path = bundle/cpp-vim
-	url = ssh://git@github.com:22/vim-scripts/cpp.vim--Skvirsky.git
-	ignore = dirty
 [submodule "bundle/mru"]
 	path = bundle/mru
 	url = ssh://git@github.com:22/vim-scripts/mru.vim.git
