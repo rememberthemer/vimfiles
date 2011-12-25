@@ -35,7 +35,7 @@ hi Operator        guifg=#d75f87 ctermfg=168
 hi PreProc         guifg=#87af00 ctermfg=106
 hi Statement       guifg=#d75f87 ctermfg=168 gui=bold cterm=bold
 hi StorageClass    guifg=#d78700 ctermfg=172
-hi String          guifg=#E6DB74 ctermfg=185
+hi String          guifg=#d7d787 ctermfg=186
 hi Tag             guifg=#d75f87 ctermfg=168 gui=italic cterm=underline
 hi Type            guifg=#5fafd7 ctermfg=74
 " }}}
