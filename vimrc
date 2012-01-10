@@ -79,34 +79,33 @@ set modeline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM UI {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Colors & Stuff
+set guifont=Envy\ Code\ R\ 10
+" set guifont=Dina\ 12 linespace=2
+" set guifont=Lucida\ Sans\ Typewriter\ 8 linespace=2
+" set guifont=Liberation\ Mono\ 8 linespace=3
+" set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
+set guicursor+=n-v-c:blinkon0
+set lines=55 columns=100
+set guioptions=aegim
+"
+"" Colors & Stuff
 set background=light
 if  has("gui_running")
     try
-	" color dullokai
-	color fokus
+	color dullokai2
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    " set guifont=Envy\ Code\ R\ 9
-    " set guifont=Dina\ 12 linespace=2
-    " set guifont=Lucida\ Sans\ Typewriter\ 8 linespace=2
-    set guifont=Liberation\ Mono\ 8 linespace=3
-    " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
-    set guicursor+=n-v-c:blinkon0
-    set lines=55 columns=100
-    set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
-    " set ttyfast
     try
-	color dullokai
+	color dullokai2
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
     " cursor color
-let &t_SI = "\<Esc>]12;White\x7"
-let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
+    let &t_SI = "\<Esc>]12;White\x7"
+    let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
     autocmd VimLeave * :!echo -ne "\033]12;Medium Aquamarine\007"
 else
     color default
@@ -158,7 +157,6 @@ set completeopt-=preview
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS {{{
@@ -171,7 +169,7 @@ let g:pep8_args = "--ignore=E501,W391"
 "---------------------------------------------------------------
 " pydoc
 "---------------------------------------------------------------
-let g:pydoc_cmd = "pydoc2"
+let g:pydoc_cmd = "pydoc"
 
 "---------------------------------------------------------------
 " MRU
@@ -323,6 +321,12 @@ let python_highlight_indent_errors = 0
 " trim trailing white space
 au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80
 au BufWritePre *.py :call ABStripTrailingWhitespaces()
+"}}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FT & Syntax Tweaks {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:is_bash = 1
 "}}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other Auto Commands "{{{
