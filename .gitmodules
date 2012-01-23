@@ -1,68 +1,68 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = ssh://git@github.com:22/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 	ignore = dirty
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = ssh://git@github.com:22/scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter.git
 	ignore = dirty
 [submodule "bundle/c-vim"]
 	path = bundle/c-vim
-	url = ssh://git@github.com:22/vim-scripts/c.vim.git
+	url = https://github.com/vim-scripts/c.vim.git
 	ignore = dirty
 [submodule "bundle/mru"]
 	path = bundle/mru
-	url = ssh://git@github.com:22/vim-scripts/mru.vim.git
+	url = https://github.com/vim-scripts/mru.vim.git
 	ignore = dirty
 [submodule "bundle/pep8"]
 	path = bundle/pep8
-	url = ssh://git@github.com:22/nvie/vim-pep8.git
+	url = https://github.com/nvie/vim-pep8.git
 	ignore = dirty
 [submodule "bundle/align"]
 	path = bundle/align
-	url = ssh://git@github.com:22/vim-scripts/Align.git
+	url = https://github.com/vim-scripts/Align.git
 	ignore = dirty
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = ssh://git@github.com:22/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 	ignore = dirty
 [submodule "bundle/bash-support"]
 	path = bundle/bash-support
-	url = ssh://git@github.com:22/vim-scripts/bash-support.vim.git
+	url = https://github.com/vim-scripts/bash-support.vim.git
 	ignore = dirty
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
-	url = ssh://git@github.com:22/xolox/vim-easytags.git
+	url = https://github.com/xolox/vim-easytags.git
 	ignore = dirty
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
-	url = ssh://git@github.com:22/tpope/vim-pathogen.git
+	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
 [submodule "bundle/pydoc.vim"]
 	path = bundle/pydoc.vim
-	url = ssh://git@github.com:22/fs111/pydoc.vim.git
+	url = https://github.com/fs111/pydoc.vim.git
 	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = ssh://git@github.com:22/majutsushi/tagbar.git
+	url = https://github.com/majutsushi/tagbar.git
 	ignore = dirty
 [submodule "bundle/gundo.vim"]
 	path = bundle/gundo.vim
-	url = ssh://git@github.com:22/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
 	ignore = dirty
 [submodule "bundle/rtm-snipmate.vim"]
 	path = bundle/rtm-snipmate.vim
-	url = ssh://git@github.com:22/rememberthemer/rtm-snipmate.vim.git
+	url = https://github.com/rememberthemer/rtm-snipmate.vim.git
 	ignore = dirty
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = ssh://git@github.com:22/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 	ignore = dirty
 [submodule "bundle/lusty"]
 	path = bundle/lusty
-	url = ssh://git@github.com:22/sjbach/lusty.git
+	url = https://github.com/sjbach/lusty.git
 	ignore = dirty
 [submodule "bundle/vim-togglelist"]
 	path = bundle/vim-togglelist
-	url = ssh://git@github.com:22/milkypostman/vim-togglelist.git
+	url = https://github.com/milkypostman/vim-togglelist.git
 	ignore = dirty
