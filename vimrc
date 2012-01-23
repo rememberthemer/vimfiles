@@ -83,15 +83,14 @@ set modeline
 set background=light
 if  has("gui_running")
     try
-	" color dullokai
-	color fokus
+	color dullokai2
+	" color fokus
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    " set guifont=Envy\ Code\ R\ 9
-    " set guifont=Dina\ 12 linespace=2
-    " set guifont=Lucida\ Sans\ Typewriter\ 8 linespace=2
-    set guifont=Liberation\ Mono\ 8 linespace=3
+    " set guifont=Envy\ Code\ R\ 10 linespace=0
+    set guifont=Ubuntu\ Mono\ 12 linespace=1
+    " set guifont=Liberation\ Mono\ 8 linespace=2
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
     set lines=55 columns=100
@@ -100,7 +99,7 @@ elseif &term =~ "xterm"
     set t_Co=256
     " set ttyfast
     try
-	color dullokai
+	color dullokai2
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
@@ -152,6 +151,13 @@ set completeopt-=preview
 " set completeopt+=menuone
 
 " }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FILETYPE stuff "{{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:bash_is_sh=1
+let g:is_bash=1
+" }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OMNIFUNC stuff "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -171,7 +177,7 @@ let g:pep8_args = "--ignore=E501,W391"
 "---------------------------------------------------------------
 " pydoc
 "---------------------------------------------------------------
-let g:pydoc_cmd = "pydoc2"
+" let g:pydoc_cmd = "pydoc2"
 
 "---------------------------------------------------------------
 " MRU
