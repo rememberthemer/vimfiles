@@ -84,7 +84,6 @@ set background=light
 if  has("gui_running")
     try
 	color dullokai2
-	" color fokus
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
@@ -97,15 +96,14 @@ if  has("gui_running")
     set guioptions=aegim
 elseif &term =~ "xterm"
     set t_Co=256
-    " set ttyfast
     try
 	color dullokai2
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
     " cursor color
-let &t_SI = "\<Esc>]12;White\x7"
-let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
+    let &t_SI = "\<Esc>]12;White\x7"
+    let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
     autocmd VimLeave * :!echo -ne "\033]12;Medium Aquamarine\007"
 else
     color default
@@ -149,7 +147,6 @@ set foldenable foldminlines=1 foldlevel=1 foldlevelstart=1
 " completion
 set completeopt-=preview
 " set completeopt+=menuone
-
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -177,7 +174,7 @@ let g:pep8_args = "--ignore=E501,W391"
 "---------------------------------------------------------------
 " pydoc
 "---------------------------------------------------------------
-" let g:pydoc_cmd = "pydoc2"
+let g:pydoc_cmd = "pydoc2"
 
 "---------------------------------------------------------------
 " MRU
