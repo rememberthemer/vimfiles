@@ -88,10 +88,9 @@ if  has("gui_running")
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    " set guifont=Envy\ Code\ R\ 9
-    " set guifont=Dina\ 12 linespace=2
-    " set guifont=Lucida\ Sans\ Typewriter\ 8 linespace=2
-    set guifont=Liberation\ Mono\ 8 linespace=2
+    " set guifont=Envy\ Code\ R\ 10 linespace=0
+    set guifont=Ubuntu\ Mono\ 12 linespace=1
+    " set guifont=Liberation\ Mono\ 8 linespace=2
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
     set lines=55 columns=100
@@ -151,6 +150,13 @@ set foldenable foldminlines=1 foldlevel=1 foldlevelstart=1
 set completeopt-=preview
 " set completeopt+=menuone
 
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FILETYPE stuff "{{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:bash_is_sh=1
+let g:is_bash=1
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OMNIFUNC stuff "{{{
