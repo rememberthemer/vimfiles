@@ -94,7 +94,7 @@ if  has("gui_running")
     set guicursor+=n-v-c:blinkon0
     set lines=55 columns=100
     set guioptions=aegim
-elseif &term =~ "xterm"
+elseif &term =~ "xterm" || &term =~ "256" 
     set t_Co=256
     try
 	color dullokai2
@@ -102,9 +102,11 @@ elseif &term =~ "xterm"
         color default
     endtry
     " cursor color
-    let &t_SI = "\<Esc>]12;White\x7"
-    let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
-    autocmd VimLeave * :!echo -ne "\033]12;Medium Aquamarine\007"
+    if ! &term =~ "screen-256color"
+	let &t_SI = "\<Esc>]12;White\x7"
+	let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
+	autocmd VimLeave * :!echo -ne "\033]12;Medium Aquamarine\007"
+    endif
 else
     color default
 endif
