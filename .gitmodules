@@ -2,10 +2,6 @@
 	path = bundle/pep8
 	url = https://github.com/nvie/vim-pep8.git
 	ignore = dirty
-[submodule "bundle/bash-support"]
-	path = bundle/bash-support
-	url = https://github.com/vim-scripts/bash-support.vim.git
-	ignore = dirty
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags.git
