@@ -66,3 +66,7 @@
 	path = bundle/vim-togglelist
 	url = https://github.com/milkypostman/vim-togglelist.git
 	ignore = dirty
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+	ignore = dirty
