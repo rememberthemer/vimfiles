@@ -1,7 +1,3 @@
-[submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-	ignore = dirty
 [submodule "bundle/vim-togglelist"]
 	path = bundle/vim-togglelist
 	url = https://github.com/milkypostman/vim-togglelist.git
