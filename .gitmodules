@@ -18,10 +18,6 @@
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 	ignore = dirty
-[submodule "bundle/gundo.vim"]
-	path = bundle/gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
-	ignore = dirty
 [submodule "bundle/rtm-snipmate.vim"]
 	path = bundle/rtm-snipmate.vim
 	url = https://github.com/rememberthemer/rtm-snipmate.vim.git
