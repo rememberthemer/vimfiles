@@ -2,10 +2,6 @@
 	path = bundle/c-vim
 	url = https://github.com/vim-scripts/c.vim.git
 	ignore = dirty
-[submodule "bundle/mru"]
-	path = bundle/mru
-	url = https://github.com/vim-scripts/mru.vim.git
-	ignore = dirty
 [submodule "bundle/pep8"]
 	path = bundle/pep8
 	url = https://github.com/nvie/vim-pep8.git
