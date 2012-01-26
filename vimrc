@@ -39,6 +39,7 @@ Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjbach/lusty'
 Bundle 'milkypostman/vim-togglelist'
+Bundle 'jpythonfold.vim' 
 "
 " }}}  
 """""""'""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
