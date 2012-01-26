@@ -26,10 +26,6 @@
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 	ignore = dirty
-[submodule "bundle/lusty"]
-	path = bundle/lusty
-	url = https://github.com/sjbach/lusty.git
-	ignore = dirty
 [submodule "bundle/vim-togglelist"]
 	path = bundle/vim-togglelist
 	url = https://github.com/milkypostman/vim-togglelist.git
