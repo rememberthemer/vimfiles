@@ -1,7 +1,3 @@
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
-	ignore = dirty
 [submodule "bundle/c-vim"]
 	path = bundle/c-vim
 	url = https://github.com/vim-scripts/c.vim.git
