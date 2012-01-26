@@ -6,16 +6,46 @@
 set nocompatible      " must be first line
 " The next two lines ensure that the ~/.vim/bundle/ system works
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" runtime bundle/vim-pathogen/autoload/pathogen.vim
+" call pathogen#infect()
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VUNDLE "{{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+
+" main bundle
+Bundle 'gmarik/vundle'
+
+
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdcommenter.git'
+Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'mru.vim'
+Bundle 'c.vim'
+Bundle 'bash-support.vim'
+Bundle 'nvie/vim-pep8'
+Bundle 'Align'
+Bundle 'tpope/vim-fugitive'
+Bundle 'xolox/vim-easytags'
+Bundle 'fs111/pydoc.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'sjl/gundo.vim'
+Bundle 'rememberthemer/rtm-snipmate.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'sjbach/lusty'
+Bundle 'milkypostman/vim-togglelist'
+"
+" }}}  
+"""""""'""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 set autoread
 
 let mapleader=","
@@ -87,12 +117,12 @@ if  has("gui_running")
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    " set guifont=Envy\ Code\ R\ 10 linespace=0
-    set guifont=Ubuntu\ Mono\ 12 linespace=1
+    set guifont=Envy\ Code\ R\ 10 linespace=1
+    " set guifont=Ubuntu\ Mono\ 12 linespace=1
     " set guifont=Liberation\ Mono\ 8 linespace=2
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
-    set lines=55 columns=100
+    set lines=55 columns=120
     set guioptions=aegim
 elseif &term =~ "xterm" || &term =~ "256" 
     set t_Co=256
@@ -112,7 +142,7 @@ else
 endif
 " }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backspace=eol,start,indent
@@ -122,10 +152,11 @@ set scrolloff=7 sidescrolloff=5
 set magic
 
 " Message & Status Stuff
-set showmode showcmd cmdheight=2
-" set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
-set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
 set laststatus=2
+if ! exists('g:Powerline_loaded')
+	set showmode showcmd cmdheight=2
+	set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
+endif
 set wildmenu wildmode=list:longest " turn on wild mode huge list
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
 
@@ -273,6 +304,8 @@ let b:atp_TexCompiler	= "pdflatex"
 let b:atp_BibCompiler	= "bibtex"			
 let g:atp_Python = "/usr/bin/python2.7"
 
+"---------------------------------------------------------------
+" Powerline
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
