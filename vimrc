@@ -24,6 +24,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
+Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'mru.vim'
 Bundle 'c.vim'
@@ -36,13 +37,12 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'sjl/gundo.vim'
 Bundle 'rememberthemer/rtm-snipmate.vim'
-Bundle 'scrooloose/syntastic'
 Bundle 'sjbach/lusty'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'jpythonfold.vim' 
 "
 " }}}  
-"""""""'""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
@@ -118,8 +118,8 @@ if  has("gui_running")
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    set guifont=Envy\ Code\ R\ 10 linespace=1
-    " set guifont=Ubuntu\ Mono\ 12 linespace=1
+    " set guifont=Envy\ Code\ R\ 10 linespace=1
+set guifont=Ubuntu\ Mono\ 10 linespace=3
     " set guifont=Liberation\ Mono\ 8 linespace=2
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
