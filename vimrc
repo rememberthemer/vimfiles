@@ -40,7 +40,7 @@ Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'sjbach/lusty'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'jpythonfold.vim' 
-"
+Bundle 'mattn/pastebin-vim'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -287,6 +287,14 @@ nnoremap <F4> :GundoToggle<CR>
 let g:gundo_width = 60
 let g:gundo_preview_height = 40
 
+"---------------------------------------------------------------
+" Pastebin
+"---------------------------------------------------------------
+" let g:loaded_pastebin=1
+let g:pastebin_api_dev_key = '7796b9711f44bcbf9dba40fe972d31df'
+let g:pastebin_api_user_name = 'rememberthemer'
+let g:pastebin_api_user_password = 'gaya2010'
+let g:pastebin_expire_date = '1M'
 "---------------------------------------------------------------
 " Latex stuff
 "---------------------------------------------------------------
