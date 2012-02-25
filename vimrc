@@ -220,10 +220,10 @@ let MRU_Max_Submenu_Entries = 20
 "---------------------------------------------------------------
 " csupport
 "---------------------------------------------------------------
-let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
-let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
-let g:C_LocalTemplateFile=$HOME."/.vim/bundle/c-vim/c-support/templates/Templates"
-let g:C_CodeSnippets=$HOME."/.vim/bundle/c-vim/c-support/codesnippets"
+let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
+let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
+let g:C_LocalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
+let g:C_CodeSnippets=$HOME."/.vim/bundle/c.vim/c-support/codesnippets"
 
 "---------------------------------------------------------------
 " NERDCommenter
