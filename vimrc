@@ -35,12 +35,13 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-easytags'
 Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
-Bundle 'sjl/gundo.vim'
+" Bundle 'sjl/gundo.vim'
 Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'sjbach/lusty'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
+Bundle 'YankRing.vim'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -92,8 +93,8 @@ set nobackup
 set directory=$HOME/.vim/tmp/swap
 set viewdir=$HOME/.vim/tmp/views
 " make vim save view (state) (folds, cursor, etc)
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
+" au BufWinLeave * silent! mkview
+" au BufWinEnter * silent! loadview
 
 
 if has("gui_running")
