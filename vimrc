@@ -313,9 +313,12 @@ let g:Tex_ViewRule_pdf='evince'
 let b:atp_TexCompiler	= "pdflatex"			
 let b:atp_BibCompiler	= "bibtex"			
 let g:atp_Python = "/usr/bin/python2.7"
-
 "---------------------------------------------------------------
 " Powerline
+"---------------------------------------------------------------
+" Yankring
+" let g:yankring_enabled = 0  " Disables the yankring
+let g:yankring_history_dir = $HOME."/.vim/tmp/"
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
