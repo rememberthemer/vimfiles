@@ -1,3 +1,5 @@
+" A
+" C
 " vim: set sw=4 sts foldmethod=marker
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ENVIRONMENT {{{ 
@@ -37,11 +39,12 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
 " Bundle 'sjl/gundo.vim'
 Bundle 'rememberthemer/rtm-snipmate.vim'
-Bundle 'sjbach/lusty'
+" Bundle 'sjbach/lusty'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
 Bundle 'YankRing.vim'
+Bundle 'sandeepcr529/Buffet.vim'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -281,12 +284,6 @@ let g:snips_company = 'Adrian Benson'
 let g:snips_copyright = g:snips_company
 " let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
 
-"---------------------------------------------------------------
-" Gundo
-"---------------------------------------------------------------
-nnoremap <F4> :GundoToggle<CR>
-let g:gundo_width = 60
-let g:gundo_preview_height = 40
 
 "---------------------------------------------------------------
 " Pastebin
@@ -309,18 +306,19 @@ let g:Tex_ViewRule_pdf='evince'
 " set iskeyword+=:
 
 "---------------------------------------------------------------
-" ATP plugin
-let b:atp_TexCompiler	= "pdflatex"			
-let b:atp_BibCompiler	= "bibtex"			
-let g:atp_Python = "/usr/bin/python2.7"
-"---------------------------------------------------------------
 " Powerline
 "---------------------------------------------------------------
 " Yankring
 " let g:yankring_enabled = 0  " Disables the yankring
 let g:yankring_history_dir = $HOME."/.vim/tmp/"
-" }}}
 
+"---------------------------------------------------------------
+" Buffet
+"---------------------------------------------------------------
+
+nnoremap <F4> :Bufferlist<CR>
+
+" }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions & keybindings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
