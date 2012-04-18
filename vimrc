@@ -120,7 +120,7 @@ if  has("gui_running")
         color default
     endtry
     " set guifont=Envy\ Code\ R\ 10 linespace=1
-set guifont=Ubuntu\ Mono\ 10 linespace=3
+set guifont=Ubuntu\ Mono\ 12 linespace=2
     " set guifont=Liberation\ Mono\ 8 linespace=2
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
@@ -387,7 +387,7 @@ au FileType help set nonumber      " no line numbers when viewing help
 au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
-au filetype sh setlocal sw=4 et sts=4
+au filetype sh setlocal sw=2 et sts=2
 au filetype vim setlocal foldmethod=marker
 
 " reread .vimrc when saved
