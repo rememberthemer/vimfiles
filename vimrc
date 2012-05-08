@@ -1,5 +1,3 @@
-" A
-" C
 " vim: set sw=4 sts foldmethod=marker
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ENVIRONMENT {{{ 
@@ -308,7 +306,10 @@ let g:Tex_ViewRule_pdf='evince'
 "---------------------------------------------------------------
 " Powerline
 "---------------------------------------------------------------
+"
+"---------------------------------------------------------------
 " Yankring
+"---------------------------------------------------------------
 " let g:yankring_enabled = 0  " Disables the yankring
 let g:yankring_history_dir = $HOME."/.vim/tmp/"
 
@@ -385,7 +386,7 @@ au FileType help set nonumber      " no line numbers when viewing help
 au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
-au filetype sh setlocal sw=2 et sts=2
+au filetype sh setlocal sw=4 et sts=4
 au filetype vim setlocal foldmethod=marker
 
 " reread .vimrc when saved
