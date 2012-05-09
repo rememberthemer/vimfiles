@@ -40,8 +40,10 @@ Bundle 'milkypostman/vim-togglelist'
 Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
 Bundle 'YankRing.vim'
+Bundle 'chrisbra/color_highlight'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'numlist.vim'
+Bundle 'klen/python-mode'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -120,7 +122,7 @@ if  has("gui_running")
         color default
     endtry
     " set guifont=Envy\ Code\ R\ 10 linespace=1
-set guifont=Ubuntu\ Mono\ 12 linespace=2
+set guifont=Ubuntu\ Mono\ 10 linespace=3
     " set guifont=Liberation\ Mono\ 8 linespace=2
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
@@ -281,6 +283,10 @@ let g:snips_company = 'Adrian Benson'
 let g:snips_copyright = g:snips_company
 " let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
 
+"---------------------------------------------------------------
+" Gundo
+"---------------------------------------------------------------
+nnoremap <F4> :Bufferlist<CR>
 
 "---------------------------------------------------------------
 " Pastebin
@@ -315,10 +321,8 @@ let g:yankring_history_dir = $HOME."/.vim/tmp/"
 "---------------------------------------------------------------
 " Buffet
 "---------------------------------------------------------------
-
 nnoremap <F4> :Bufferlist<CR>
 
-" }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions & keybindings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
