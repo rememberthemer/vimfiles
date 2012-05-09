@@ -35,13 +35,14 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-easytags'
 Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
-" Bundle 'sjl/gundo.vim'
 Bundle 'rememberthemer/rtm-snipmate.vim'
-Bundle 'sjbach/lusty'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
 Bundle 'YankRing.vim'
+Bundle 'chrisbra/color_highlight'
+Bundle 'sandeepcr529/Buffet.vim'
+Bundle 'klen/python-mode'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -284,9 +285,7 @@ let g:snips_copyright = g:snips_company
 "---------------------------------------------------------------
 " Gundo
 "---------------------------------------------------------------
-nnoremap <F4> :GundoToggle<CR>
-let g:gundo_width = 60
-let g:gundo_preview_height = 40
+nnoremap <F4> :Bufferlist<CR>
 
 "---------------------------------------------------------------
 " Pastebin
@@ -345,7 +344,7 @@ map <silent> <F2> :NERDTreeToggle<CR>
 map <silent> <F3> :TagbarToggle<CR>
 
 
-map <silent> <F5> :call ToggleLocationList()<CR>
+map <silent> <F5> :call lw<CR>
 
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>
