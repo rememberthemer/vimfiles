@@ -308,10 +308,14 @@ let g:Tex_ViewRule_pdf='evince'
 " set iskeyword+=:
 
 "---------------------------------------------------------------
-" ATP plugin
-let b:atp_TexCompiler	= "pdflatex"			
-let b:atp_BibCompiler	= "bibtex"			
-let g:atp_Python = "/usr/bin/python2.7"
+" Powerline
+"---------------------------------------------------------------
+"
+"---------------------------------------------------------------
+" Yankring
+"---------------------------------------------------------------
+" let g:yankring_enabled = 0  " Disables the yankring
+let g:yankring_history_dir = $HOME."/.vim/tmp/"
 
 "---------------------------------------------------------------
 " Powerline
@@ -344,7 +348,7 @@ map <silent> <F2> :NERDTreeToggle<CR>
 map <silent> <F3> :TagbarToggle<CR>
 
 
-map <silent> <F5> :call lw<CR>
+map <silent> <F5> :call ToggleLocationList()<CR>
 
 " open file name under cursor in new split buffer
 map <F8> :vertical wincmd f<CR>
