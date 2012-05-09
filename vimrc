@@ -35,14 +35,13 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-easytags'
 Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
-" Bundle 'sjl/gundo.vim'
 Bundle 'rememberthemer/rtm-snipmate.vim'
-" Bundle 'sjbach/lusty'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
 Bundle 'YankRing.vim'
 Bundle 'sandeepcr529/Buffet.vim'
+Bundle 'numlist.vim'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{

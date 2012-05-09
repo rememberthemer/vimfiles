@@ -64,6 +64,7 @@ Copyright: (c) 2004-2011 by Charles E. Campbell, Jr.	*manpageview-copyright*
 		:[count]VEMan topic    -- g:manpageview_winopen= "vsplit="
 		:[count]OMan topic     -- g:manpageview_winopen= "osplit"
 		:[count]RMan topic     -- g:manpageview_winopen= "reuse"
+		:[count]TMan topic     -- g:manpageview_winopen= "tab"
 <
 	To support perl, manpageview now can switch to using perldoc
 	instead of man.  In fact, the facility is generalized to
@@ -228,19 +229,21 @@ Copyright: (c) 2004-2011 by Charles E. Campbell, Jr.	*manpageview-copyright*
 		     extract the manpage.
 
 						*g:manpageview_winopen*
-	g:manpageview_winopen : may take on one of six values:
+	g:manpageview_winopen : may take on one of seven values:
 
-	   "only"    man page will become sole window.
-	             Side effect: All windows' contents will be saved first!
-		     (windo w) Use :q to terminate the manpage and restore the
-		     window setup.  Note that mksession is used for this
-		     option, hence the +mksession configure-option is required.
-	   "hsplit"  man page will appear in a horizontally          split window (default)
-	   "vsplit"  man page will appear in a vertically            split window
-	   "hsplit=" man page will appear in a horizontally & evenly split window
-	   "vsplit=" man page will appear in a vertically   & evenly split window
-	   "reuse"   man page will re-use current window.  Use <ctrl-o> to return.
-	             (for the reuse option, thanks go to Alan Schmitt)
+	   *OMan*  "only"		man page will become sole window.
+				Side effect: All windows' contents will be saved first!
+				(windo w) Use :q to terminate the manpage and restore the
+				window setup.  Note that mksession is used for this
+				option, hence the +mksession configure-option is required.
+	   *HMan*  "hsplit"	man page will appear in a horizontally          split window (default)
+	   *VMan*  "vsplit"	man page will appear in a vertically            split window
+	   *HEMan* "hsplit="	man page will appear in a horizontally & evenly split window
+	   *VEMan* "vsplit="	man page will appear in a vertically   & evenly split window
+	   *RMan*  "reuse"	man page will re-use current window.  Use <ctrl-o> to return.
+				(for the reuse option, thanks go to Alan Schmitt)
+	   *TMan*  "tab"		man page will be on a separate tab
+
 
 				*g:manpageview_server* *g:manpgeview_user*
 
@@ -312,6 +315,7 @@ Copyright: (c) 2004-2011 by Charles E. Campbell, Jr.	*manpageview-copyright*
 
 	v24: Jan 03, 2011  * some extra protection against trying to use
 			     a program that is not executable
+	     Mar 30, 2012  * TMan command included
 	v23: May 18, 2009  * on the third attempt to get a manpage, if
 	                     the user provided no explicit
 			     |g:manpageview_iconv| setting, then the

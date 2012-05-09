@@ -21,8 +21,9 @@ com! -nargs=* -count=0	HMan	let g:manpageview_winopen="hsplit" |call manpageview
 com! -nargs=* -count=0	HEMan	let g:manpageview_winopen="hsplit="|call manpageview#ManPageView(0,<count>,<f-args>)
 com! -nargs=* -count=0	OMan	let g:manpageview_winopen="only"   |call manpageview#ManPageView(0,<count>,<f-args>)
 com! -nargs=* -count=0	RMan	let g:manpageview_winopen="reuse"  |call manpageview#ManPageView(0,<count>,<f-args>)
-com! -nargs=* -count=0	VMan	let g:manpageview_winopen="vsplit="|call manpageview#ManPageView(0,<count>,<f-args>)
-com! -nargs=* -count=0	VEMan	let g:manpageview_winopen="vsplit" |call manpageview#ManPageView(0,<count>,<f-args>)
+com! -nargs=* -count=0	VEMan	let g:manpageview_winopen="vsplit="|call manpageview#ManPageView(0,<count>,<f-args>)
+com! -nargs=* -count=0	VMan	let g:manpageview_winopen="vsplit" |call manpageview#ManPageView(0,<count>,<f-args>)
+com! -nargs=* -count=0	TMan	let g:manpageview_winopen="tab"    |call manpageview#ManPageView(0,<count>,<f-args>)
 com! -nargs=? -count=0	KMan	call manpageview#KMan(<q-args>)
 
 " ---------------------------------------------------------------------
