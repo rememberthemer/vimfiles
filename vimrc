@@ -91,12 +91,12 @@ endif
 
 " Backups
 set nobackup
-
 set directory=$HOME/.vim/tmp/swap
+
 set viewdir=$HOME/.vim/tmp/views
 " make vim save view (state) (folds, cursor, etc)
-" au BufWinLeave * silent! mkview
-" au BufWinEnter * silent! loadview
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
 
 
 if has("gui_running")
@@ -120,12 +120,16 @@ if  has("gui_running")
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    " set guifont=Envy\ Code\ R\ 10 linespace=1
-set guifont=Ubuntu\ Mono\ 10 linespace=3
+    if substitute(system('hostname'), '\n', '', '') == "co509pc04"
+	set guifont=Ubuntu\ Mono\ 12 linespace=2
+	set lines=50 columns=120
+    else
+	set guifont=Ubuntu\ Mono\ 10 linespace=3
+	set lines=55 columns=120
+    endif
     " set guifont=Liberation\ Mono\ 8 linespace=2
     " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
     set guicursor+=n-v-c:blinkon0
-    set lines=55 columns=120
     set guioptions=aegim
 elseif &term =~ "xterm" || &term =~ "256" 
     set t_Co=256
