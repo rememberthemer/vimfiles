@@ -37,13 +37,16 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'milkypostman/vim-togglelist'
-Bundle 'jpythonfold.vim' 
+" Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
-Bundle 'YankRing.vim'
+" Bundle 'YankRing.vim'
 Bundle 'chrisbra/color_highlight'
 Bundle 'sandeepcr529/Buffet.vim'
-Bundle 'numlist.vim'
+" Bundle 'numlist.vim'
+" Bundle 'Python-mode-klen'
+" Bundle 'jpythonfold.vim'
 Bundle 'klen/python-mode'
+Bundle 'Efficient-python-folding'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -363,6 +366,7 @@ map <F8> :vertical wincmd f<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ConqueTerm_PyVersion = 2
 " Tweak python hilighting etc
 au FileType python syn keyword pythonDecorator True None False self
 let python_highlight_all = 1
