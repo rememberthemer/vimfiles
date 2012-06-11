@@ -37,16 +37,11 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'milkypostman/vim-togglelist'
-" Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
-" Bundle 'YankRing.vim'
 Bundle 'chrisbra/color_highlight'
 Bundle 'sandeepcr529/Buffet.vim'
-" Bundle 'numlist.vim'
-" Bundle 'Python-mode-klen'
 " Bundle 'jpythonfold.vim'
-Bundle 'klen/python-mode'
-Bundle 'Efficient-python-folding'
+Bundle 'tmhedberg/SimpylFold'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -368,6 +363,9 @@ map <F8> :vertical wincmd f<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ConqueTerm_PyVersion = 2
 " Tweak python hilighting etc
+
+let g:SimpylFold_docstring_preview = 1
+
 au FileType python syn keyword pythonDecorator True None False self
 let python_highlight_all = 1
 let python_highlight_builtin_objs = 1
