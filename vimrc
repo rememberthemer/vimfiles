@@ -37,7 +37,7 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'milkypostman/vim-togglelist'
-" Bundle 'jpythonfold.vim' 
+Bundle 'jpythonfold.vim' 
 Bundle 'mattn/pastebin-vim'
 " Bundle 'YankRing.vim'
 Bundle 'chrisbra/color_highlight'
@@ -46,7 +46,8 @@ Bundle 'sandeepcr529/Buffet.vim'
 " Bundle 'Python-mode-klen'
 " Bundle 'jpythonfold.vim'
 Bundle 'klen/python-mode'
-Bundle 'Efficient-python-folding'
+" Bundle 'Efficient-python-folding'
+Bundle 'pep8'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -366,6 +367,10 @@ map <F8> :vertical wincmd f<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python-mode
+let pymode_lint_checker = 'pyflakes,pep8'
+" set pymode_lint_ignore
+
 let g:ConqueTerm_PyVersion = 2
 " Tweak python hilighting etc
 au FileType python syn keyword pythonDecorator True None False self
@@ -379,7 +384,6 @@ let python_highlight_string_templates = 1
 let python_highlight_doctests = 1
 let python_highlight_space_errors = 1
 let python_highlight_indent_errors = 0
-
 
 " trim trailing white space
 au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80
