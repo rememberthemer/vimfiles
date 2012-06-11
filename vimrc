@@ -214,6 +214,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 " pep8
 "---------------------------------------------------------------
 let g:pep8_args = "--ignore=E501,W391"
+let g:pep8_map = "<F9>"
 
 "---------------------------------------------------------------
 " pydoc
@@ -245,15 +246,6 @@ let NERDSpaceDelims=1
 let g:NERDCustomDelimiters = {
 			\ 'PKGBUILD': { 'left': '#'}
 			\ }
-"---------------------------------------------------------------
-" Supertab
-"---------------------------------------------------------------
-" let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabMappingForward = '<c-space>'
-let g:SuperTabMappingBackward = '<s-c-space>'
-" let g:SuperTabMappingForward = '<nul>'
-" let g:SuperTabMappingBackward = '<s-nul>'
-" let g:SuperTabLongestEnhanced = 1
 
 "---------------------------------------------------------------
 " Tags
