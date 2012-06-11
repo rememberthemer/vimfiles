@@ -214,6 +214,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 " pep8
 "---------------------------------------------------------------
 let g:pep8_args = "--ignore=E501,W391"
+let g:pep8_map = "<F9>"
 
 "---------------------------------------------------------------
 " pydoc
