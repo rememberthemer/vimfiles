@@ -38,10 +38,15 @@ Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'mattn/pastebin-vim'
+" Bundle 'YankRing.vim'
 Bundle 'chrisbra/color_highlight'
 Bundle 'sandeepcr529/Buffet.vim'
+" Bundle 'numlist.vim'
+" Bundle 'Python-mode-klen'
 " Bundle 'jpythonfold.vim'
-Bundle 'tmhedberg/SimpylFold'
+Bundle 'klen/python-mode'
+" Bundle 'Efficient-python-folding'
+Bundle 'pep8'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -208,6 +213,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 " pep8
 "---------------------------------------------------------------
 let g:pep8_args = "--ignore=E501,W391"
+let g:pep8_map = "<F9>"
 
 "---------------------------------------------------------------
 " pydoc
@@ -239,15 +245,6 @@ let NERDSpaceDelims=1
 let g:NERDCustomDelimiters = {
 			\ 'PKGBUILD': { 'left': '#'}
 			\ }
-"---------------------------------------------------------------
-" Supertab
-"---------------------------------------------------------------
-" let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabMappingForward = '<c-space>'
-let g:SuperTabMappingBackward = '<s-c-space>'
-" let g:SuperTabMappingForward = '<nul>'
-" let g:SuperTabMappingBackward = '<s-nul>'
-" let g:SuperTabLongestEnhanced = 1
 
 "---------------------------------------------------------------
 " Tags
@@ -361,11 +358,12 @@ map <F8> :vertical wincmd f<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python-mode
+let pymode_lint_checker = 'pyflakes,pep8'
+" set pymode_lint_ignore
+
 let g:ConqueTerm_PyVersion = 2
 " Tweak python hilighting etc
-
-let g:SimpylFold_docstring_preview = 1
-
 au FileType python syn keyword pythonDecorator True None False self
 let python_highlight_all = 1
 let python_highlight_builtin_objs = 1
@@ -377,7 +375,6 @@ let python_highlight_string_templates = 1
 let python_highlight_doctests = 1
 let python_highlight_space_errors = 1
 let python_highlight_indent_errors = 0
-
 
 " trim trailing white space
 au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80
