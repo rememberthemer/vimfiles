@@ -13,40 +13,35 @@ set nocompatible      " must be first line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Call vundle directly
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-
 " main bundle
 Bundle 'gmarik/vundle'
-
 
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline.git'
-Bundle 'mru.vim'
-Bundle 'c.vim'
-Bundle 'bash-support.vim'
-Bundle 'nvie/vim-pep8'
-Bundle 'Align'
+Bundle 'milkypostman/vim-togglelist'
 Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-easytags'
 Bundle 'fs111/pydoc.vim'
+Bundle 'mru.vim'
+Bundle 'c.vim'
+Bundle 'bash-support.vim'
+Bundle 'Align'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
-Bundle 'milkypostman/vim-togglelist'
 Bundle 'mattn/pastebin-vim'
-" Bundle 'YankRing.vim'
-Bundle 'chrisbra/color_highlight'
+" Bundle 'chrisbra/color_highlight'
 Bundle 'sandeepcr529/Buffet.vim'
-" Bundle 'numlist.vim'
-" Bundle 'Python-mode-klen'
-" Bundle 'jpythonfold.vim'
 Bundle 'klen/python-mode'
-" Bundle 'Efficient-python-folding'
+" Bundle 'jpythonfold.vim'
 Bundle 'pep8'
+Bundle 'nvie/vim-flake8'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
