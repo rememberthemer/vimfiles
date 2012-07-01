@@ -40,8 +40,8 @@ Bundle 'mattn/pastebin-vim'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'klen/python-mode'
 " Bundle 'jpythonfold.vim'
-Bundle 'pep8'
-Bundle 'nvie/vim-flake8'
+" Bundle 'pep8'
+" Bundle 'nvie/vim-flake8'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -118,8 +118,8 @@ if  has("gui_running")
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    if substitute(system('hostname'), '\n', '', '') == "co509pc04"
-	set guifont=Ubuntu\ Mono\ 12 linespace=2
+    if substitute(system('hostname'), '\n', '', '') == "co516pc03"
+	set guifont=Ubuntu\ Mono\ 10 linespace=3
 	set lines=50 columns=120
     else
 	set guifont=Ubuntu\ Mono\ 10 linespace=3
@@ -266,7 +266,10 @@ let NERDTreeDirArrows=1
 " syntastic
 "---------------------------------------------------------------
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
+let g:syntastic_auto_loc_list=1
+let g:syntastic_loc_list_height=5
+let g:syntastic_quiet_warnings=1
+
 " let g:syntastic_quiet_warnings=1
 "---------------------------------------------------------------
 " SnipMate
@@ -300,16 +303,6 @@ let g:Tex_ViewRule_pdf='evince'
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
 " set iskeyword+=:
-
-"---------------------------------------------------------------
-" Powerline
-"---------------------------------------------------------------
-"
-"---------------------------------------------------------------
-" Yankring
-"---------------------------------------------------------------
-" let g:yankring_enabled = 0  " Disables the yankring
-let g:yankring_history_dir = $HOME."/.vim/tmp/"
 
 "---------------------------------------------------------------
 " Buffet
@@ -354,8 +347,9 @@ map <F8> :vertical wincmd f<CR>
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python-mode
+let pymode_lint = 0
 let pymode_lint_checker = 'pyflakes,pep8'
-" set pymode_lint_ignore
+let pymode_lint_ignore = 'W391,E501' 
 
 let g:ConqueTerm_PyVersion = 2
 " Tweak python hilighting etc
