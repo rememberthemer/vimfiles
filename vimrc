@@ -119,10 +119,12 @@ if  has("gui_running")
         color default
     endtry
     if substitute(system('hostname'), '\n', '', '') == "co516pc03"
-	set guifont=Ubuntu\ Mono\ 10 linespace=3
+	" set guifont=Ubuntu\ Mono\ 10 linespace=3
+	set guifont=Monospace\ 8 linespace=2
 	set lines=50 columns=120
     else
-	set guifont=Ubuntu\ Mono\ 10 linespace=3
+	set guifont=Monospace\ 8 linespace=2
+	" set guifont=Ubuntu\ Mono\ 10 linespace=3
 	set lines=55 columns=120
     endif
     " set guifont=Liberation\ Mono\ 8 linespace=2
