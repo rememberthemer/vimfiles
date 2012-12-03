@@ -121,7 +121,7 @@ if  has("gui_running")
     if substitute(system('hostname'), '\n', '', '') == "co516pc03"
 	" set guifont=Ubuntu\ Mono\ 10 linespace=3
 	set guifont=Monospace\ 8 linespace=2
-	set lines=50 columns=120
+	set lines=55 columns=120
     else
 	set guifont=Monospace\ 8 linespace=2
 	" set guifont=Ubuntu\ Mono\ 10 linespace=3
@@ -306,6 +306,11 @@ let g:Tex_ViewRule_pdf='evince'
 " all the figure labels. Very useful!
 " set iskeyword+=:
 
+"---------------------------------------------------------------
+" Powerline
+"---------------------------------------------------------------
+" let g:Powerline_symbols = 'unicode'
+let g:Powerline_stl_path_style = 'full'
 "---------------------------------------------------------------
 " Buffet
 "---------------------------------------------------------------
