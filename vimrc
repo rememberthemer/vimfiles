@@ -308,6 +308,11 @@ let g:Tex_ViewRule_pdf='evince'
 " set iskeyword+=:
 
 "---------------------------------------------------------------
+" Powerline
+"---------------------------------------------------------------
+" let g:Powerline_symbols = 'unicode'
+let g:Powerline_stl_path_style = 'full'
+"---------------------------------------------------------------
 " Buffet
 "---------------------------------------------------------------
 nnoremap <F4> :Bufferlist<CR>
@@ -385,7 +390,6 @@ au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
 au filetype sh setlocal sw=4 et sts=4
-au filetype cmake setlocal sw=4 et sts=4
 au filetype vim setlocal foldmethod=marker
 
 " reread .vimrc when saved
