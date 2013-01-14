@@ -42,6 +42,7 @@ Bundle 'klen/python-mode'
 " Bundle 'jpythonfold.vim'
 " Bundle 'pep8'
 " Bundle 'nvie/vim-flake8'
+Bundle 'tmallen/proj-vim'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -125,13 +126,9 @@ if  has("gui_running")
 	set guifont=Source\ Code\ Pro\ 9
 
     else
-	set guifont=Monospace\ 8 linespace=2
-	" set guifont=Ubuntu\ Mono\ 10 linespace=3
+	set guifont=Source\ Code\ Pro\ 9
 	set lines=55 columns=120
     endif
-    " set guifont=Liberation\ Mono\ 8 linespace=2
-    " set guifont=DejaVu\ Sans\ Mono\ 8 linespace=2
-    set guicursor+=n-v-c:blinkon0
     set guioptions=aegim
 elseif &term =~ "xterm" || &term =~ "256" 
     set t_Co=256
