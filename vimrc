@@ -118,10 +118,12 @@ if  has("gui_running")
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    if substitute(system('hostname'), '\n', '', '') == "co516pc03"
+    if substitute(system('hostname'), '\n', '', '') == "co516pc03.staff.vuw.ac.nz"
 	" set guifont=Ubuntu\ Mono\ 10 linespace=3
-	set guifont=Monospace\ 8 linespace=2
-	set lines=55 columns=120
+	" set guifont=Consolas\ 10 linespace=2
+	set lines=55 columns=120  
+	set guifont=Source\ Code\ Pro\ 9
+
     else
 	set guifont=Monospace\ 8 linespace=2
 	" set guifont=Ubuntu\ Mono\ 10 linespace=3
