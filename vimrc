@@ -42,6 +42,7 @@ Bundle 'klen/python-mode'
 " Bundle 'jpythonfold.vim'
 " Bundle 'pep8'
 " Bundle 'nvie/vim-flake8'
+Bundle 'tmallen/proj-vim'
 " }}}  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -119,10 +120,12 @@ if  has("gui_running")
         color default
     endtry
     if substitute(system('hostname'), '\n', '', '') == "co516pc03"
-	set guifont=Ubuntu\ Mono\ 10 linespace=3
+	set guifont=Source\ Code\ Pro\ 9
+	" set guifont=Ubuntu\ Mono\ 10 linespace=3
 	set lines=50 columns=120
     else
-	set guifont=Ubuntu\ Mono\ 10 linespace=3
+	set guifont=Source\ Code\ Pro\ 9
+	" set guifont=Ubuntu\ Mono\ 10 linespace=3
 	set lines=55 columns=120
     endif
     " set guifont=Liberation\ Mono\ 8 linespace=2
@@ -382,6 +385,7 @@ au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
 au filetype sh setlocal sw=4 et sts=4
+au filetype cmake setlocal sw=4 et sts=4
 au filetype vim setlocal foldmethod=marker
 
 " reread .vimrc when saved
