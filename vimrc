@@ -32,6 +32,8 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'mru.vim'
 Bundle 'c.vim'
 Bundle 'bash-support.vim'
+Bundle 'mhinz/vim-startify'
+Bundle 'junegunn/vim-easy-align'
 Bundle 'Align'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
@@ -108,26 +110,30 @@ endif
 set modeline
 
 "}}}
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM UI {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Colors & Stuff
 set background=light
+
 if  has("gui_running")
     try
 	color dullokai2
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    if substitute(system('hostname'), '\n', '', '') == "co516pc03.staff.vuw.ac.nz"
-	" set guifont=Ubuntu\ Mono\ 10 linespace=3
-	" set guifont=Consolas\ 10 linespace=2
-	set lines=55 columns=120  
-	set guifont=Source\ Code\ Pro\ 9
-
-    else
-	set guifont=Source\ Code\ Pro\ 9
-	set lines=55 columns=120
+    set lines=55 columns=120  
+    if has("unix")
+	if system("uname") == "Darwin\n"
+	    set guifont=Source\ Code\ Pro:h12
+	elseif substitute(system('hostname'), '\n', '', '') == "co516pc03.staff.vuw.ac.nz"
+	    " set guifont=Ubuntu\ Mono\ 10 linespace=3
+	    set guifont=Source\ Code\ Pro\ 9
+	else
+	    set guifont=Source\ Code\ Pro\ 9
+	endif
     endif
     set guioptions=aegim
 elseif &term =~ "xterm" || &term =~ "256" 
@@ -160,9 +166,10 @@ set magic
 " Message & Status Stuff
 set laststatus=2
 if ! exists('g:Powerline_loaded')
-	set showmode showcmd cmdheight=2
-	set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
+    set showmode showcmd cmdheight=2
+    set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
 endif
+
 set wildmenu wildmode=list:longest " turn on wild mode huge list
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
 
@@ -214,7 +221,7 @@ let g:pep8_map = "<F9>"
 "---------------------------------------------------------------
 " pydoc
 "---------------------------------------------------------------
-let g:pydoc_cmd = "pydoc2"
+let g:pydoc_cmd = "pydoc"
 
 "---------------------------------------------------------------
 " MRU
