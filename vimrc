@@ -27,6 +27,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'tpope/vim-fugitive'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-pyref'
 Bundle 'xolox/vim-easytags'
 Bundle 'fs111/pydoc.vim'
 Bundle 'mru.vim'
@@ -93,7 +95,6 @@ endif
 " Backups
 set nobackup
 set directory=$HOME/.vim/tmp/swap
-
 set viewdir=$HOME/.vim/tmp/views
 " make vim save view (state) (folds, cursor, etc)
 au BufWinLeave * silent! mkview
@@ -132,7 +133,7 @@ if  has("gui_running")
 	    " set guifont=Ubuntu\ Mono\ 10 linespace=3
 	    set guifont=Source\ Code\ Pro\ 9
 	else
-	    set guifont=Source\ Code\ Pro\ 9
+	    set guifont=Source\ Code\ Pro\ Medium\ 9
 	endif
     endif
     set guioptions=aegim
@@ -204,9 +205,9 @@ let g:is_bash=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OMNIFUNC stuff "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType c set omnifunc=ccomplete#Complete 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags 
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -221,6 +222,7 @@ let g:pep8_map = "<F9>"
 "---------------------------------------------------------------
 " pydoc
 "---------------------------------------------------------------
+
 let g:pydoc_cmd = "pydoc"
 
 "---------------------------------------------------------------
@@ -258,6 +260,7 @@ let g:easytags_dynamic_files = 1
 " let g:easytags_by_filetype = '~/.vim/tags'
 let g:easytags_on_cursorhold = 0
 
+
 "---------------------------------------------------------------
 " NERDTree
 "---------------------------------------------------------------
@@ -290,12 +293,6 @@ let g:snips_author = 'Adrian Benson <Adrian.M.Benson__AT__gmail__DOT__com>'
 let g:snips_company = 'Adrian Benson'
 let g:snips_copyright = g:snips_company
 " let g:snippets_dir = '/home/bensonad/.vim/bundle/snipmate-snippets'
-
-"---------------------------------------------------------------
-" Gundo
-"---------------------------------------------------------------
-nnoremap <F4> :Bufferlist<CR>
-
 "---------------------------------------------------------------
 " Pastebin
 "---------------------------------------------------------------
@@ -380,28 +377,33 @@ let python_highlight_string_format = 1
 let python_highlight_string_templates = 1
 let python_highlight_doctests = 1
 let python_highlight_space_errors = 1
-let python_highlight_indent_errors = 0
+let python_highlight_indent_errors = 1
 
 " trim trailing white space
-au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80
+au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80 fdm=syntax
 au BufWritePre *.py :call ABStripTrailingWhitespaces()
 "}}}
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other Auto Commands "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change Working Directory to that of the current file
 cmap cwd lcd %:p:h
 
-
 "helpfile
 au FileType help set nonumber      " no line numbers when viewing help
 au FileType help nnoremap <buffer><cr> <c-]>   " Enter selects subject
 au FileType help nnoremap <buffer><bs> <c-T>   " Backspace to go back
 
-au filetype sh setlocal sw=4 et sts=4
-au filetype vim setlocal foldmethod=marker
+" basic filetype stuff
+au filetype sh  setlocal sw=4 sts=4 et fdm=syntax
+au filetype vim setlocal sw=4 sts=4 et fdm=marker
+au filetype c   setlocal sw=4 sts=4 et fdm=syntax
+au filetype cpp setlocal sw=4 sts=4 et fdm=syntax
+au filetype rst setlocal sw=4 sts=4 et
+
+" }}}
 
 " reread .vimrc when saved
 au BufWritePost ~/.vimrc   so ~/.vimrc
-" }}}
 
