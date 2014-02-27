@@ -1,6 +1,6 @@
 " vim: set sw=4 sts foldmethod=marker
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ENVIRONMENT {{{ 
+" ENVIRONMENT {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible      " must be first line
@@ -24,7 +24,8 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-powerline.git'
+" Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'bling/vim-airline'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-misc'
@@ -35,19 +36,15 @@ Bundle 'mru.vim'
 Bundle 'c.vim'
 Bundle 'bash-support.vim'
 Bundle 'mhinz/vim-startify'
-Bundle 'junegunn/vim-easy-align'
 Bundle 'Align'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
-Bundle 'mattn/pastebin-vim'
-" Bundle 'chrisbra/color_highlight'
+" Bundle 'mattn/pastebin-vim'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'klen/python-mode'
-" Bundle 'jpythonfold.vim'
-" Bundle 'pep8'
-" Bundle 'nvie/vim-flake8'
 Bundle 'tmallen/proj-vim'
-" }}}  
+Bundle 'mbadran/headlights'
+" }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -121,34 +118,34 @@ set background=light
 
 if  has("gui_running")
     try
-	color dullokai2
+        color dullokai2
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
-    set lines=55 columns=120  
+    set lines=55 columns=120
     if has("unix")
-	if system("uname") == "Darwin\n"
-	    set guifont=Source\ Code\ Pro:h12
-	elseif substitute(system('hostname'), '\n', '', '') == "co516pc03.staff.vuw.ac.nz"
-	    " set guifont=Ubuntu\ Mono\ 10 linespace=3
-	    set guifont=Source\ Code\ Pro\ 9
-	else
-	    set guifont=Source\ Code\ Pro\ Medium\ 9
-	endif
+        if system("uname") == "Darwin\n"
+            set guifont=Source\ Code\ Pro:h12
+        elseif substitute(system('hostname'), '\n', '', '') == "co516pc03.staff.vuw.ac.nz"
+            " set guifont=Ubuntu\ Mono\ 10 linespace=3
+            set guifont=Source\ Code\ Pro\ 9
+        else
+            set guifont=Source\ Code\ Pro\ Medium\ 9
+        endif
     endif
     set guioptions=aegim
-elseif &term =~ "xterm" || &term =~ "256" 
+elseif &term =~ "xterm" || &term =~ "256"
     set t_Co=256
     try
-	color dullokai2
+        color dullokai2
     catch /^Vim\%((\a\+)\)\=:E185/
         color default
     endtry
     " cursor color
     if ! &term =~ "screen-256color"
-	let &t_SI = "\<Esc>]12;White\x7"
-	let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
-	autocmd VimLeave * :!echo -ne "\033]12;Medium Aquamarine\007"
+        let &t_SI = "\<Esc>]12;White\x7"
+        let &t_EI = "\<Esc>]12;Medium Aquamarine\x7"
+        autocmd VimLeave * :!echo -ne "\033]12;Medium Aquamarine\007"
     endif
 else
     color default
@@ -166,10 +163,6 @@ set magic
 
 " Message & Status Stuff
 set laststatus=2
-if ! exists('g:Powerline_loaded')
-    set showmode showcmd cmdheight=2
-    set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
-endif
 
 set wildmenu wildmode=list:longest " turn on wild mode huge list
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
@@ -177,7 +170,7 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png
 " Search Stuff
 set showmatch incsearch ignorecase smartcase hlsearch
 " turn off search highlights with enter
-nnoremap <silent> <CR> :noh<CR><CR> 
+nnoremap <silent> <CR> :noh<CR><CR>
 
 " misc
 set nolist listchars=tab:\|-,trail:.,extends:>,precedes:<
@@ -205,9 +198,9 @@ let g:is_bash=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OMNIFUNC stuff "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType c set omnifunc=ccomplete#Complete 
+autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags 
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -248,8 +241,8 @@ let g:C_CodeSnippets=$HOME."/.vim/bundle/c.vim/c-support/codesnippets"
 let NERDSpaceDelims=1
 " custom maps
 let g:NERDCustomDelimiters = {
-			\ 'PKGBUILD': { 'left': '#'}
-			\ }
+\ 'PKGBUILD': { 'left': '#'}
+\ }
 
 "---------------------------------------------------------------
 " Tags
@@ -284,6 +277,8 @@ let g:loaded_syntastic_sh_checkbashisms_checker=1
 let g:syntastic_c_compiler_options = ' -std=c99'
 let g:syntastic_c_remove_include_errors = 1
 
+let g:syntastic_python_checker_args='--ignore=E501 --disable=C0103'
+
  " let g:syntastic_loc_list_height=5
 " let g:syntastic_quiet_warnings=1
 "---------------------------------------------------------------
@@ -314,10 +309,21 @@ let g:Tex_ViewRule_pdf='evince'
 " set iskeyword+=:
 
 "---------------------------------------------------------------
-" Powerline
+" Airline
 "---------------------------------------------------------------
-" let g:Powerline_symbols = 'unicode'
-let g:Powerline_stl_path_style = 'full'
+" if exists('g:loaded_airline')
+    " let g:Powerline_symbols = 'unicode'
+    let g:airline_theme='molokai'
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
+" else
+"     set showmode showcmd cmdheight=2
+"     set statusline=%2n\ %F\ %m%y%r%w\ %=C:%c\ L:%l,%L[%p]
+" endif
+
 "---------------------------------------------------------------
 " Buffet
 "---------------------------------------------------------------
@@ -361,9 +367,10 @@ map <F8> :vertical wincmd f<CR>
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python-mode
-let pymode_lint = 0
+let pymode_lint = 1
 let pymode_lint_checker = 'pyflakes,pep8'
-let pymode_lint_ignore = 'W391,E501' 
+let pymode_lint_ignore = 'W391,E501'
+" let g:pymode_rope = 0
 
 let g:ConqueTerm_PyVersion = 2
 " Tweak python hilighting etc
