@@ -38,7 +38,6 @@ Bundle 'mhinz/vim-startify'
 Bundle 'Align'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
-" Bundle 'mattn/pastebin-vim'
 Bundle 'sandeepcr529/Buffet.vim'
 
 Bundle 'vim-scripts/applescript.vim'
@@ -127,7 +126,7 @@ if  has("gui_running")
             set guifont=Source\ Code\ Pro:h12
         elseif substitute(system('hostname'), '\n', '', '') == "co516pc03.staff.vuw.ac.nz"
             " set guifont=Ubuntu\ Mono\ 10 linespace=3
-            set guifont=Source\ Code\ Pro\ 9
+            set guifont=Source\ Code\ Pro Medium\ 9
         else
             set guifont=Source\ Code\ Pro\ Medium\ 9
         endif
@@ -276,8 +275,8 @@ let g:loaded_syntastic_sh_checkbashisms_checker=1
 "c checking
 let g:syntastic_c_compiler_options = ' -std=c99'
 let g:syntastic_c_remove_include_errors = 1
-
-let g:syntastic_python_checker_args='--ignore=E501 --disable=C0103'
+let g:syntastic_python_checkers=['pylint', 'python', 'flake8']
+" let g:syntastic_python_checker_args='--ignore=E501 --disable=C0103,W0702,E303'
 
  " let g:syntastic_loc_list_height=5
 " let g:syntastic_quiet_warnings=1
