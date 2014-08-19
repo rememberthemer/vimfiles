@@ -24,7 +24,6 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'scrooloose/syntastic'
-" Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'bling/vim-airline'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'tpope/vim-fugitive'
@@ -41,10 +40,10 @@ Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
 " Bundle 'mattn/pastebin-vim'
 Bundle 'sandeepcr529/Buffet.vim'
-Bundle 'klen/python-mode'
-Bundle 'tmallen/proj-vim'
-Bundle 'mbadran/headlights'
-" }}}
+
+Bundle 'vim-scripts/applescript.vim'
+
+"}}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -206,6 +205,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:headlights_use_plugin_menu = 1
 "---------------------------------------------------------------
 " pep8
 "---------------------------------------------------------------
@@ -252,7 +252,7 @@ let g:easytags_file = '~/.vim/tags/tags'
 let g:easytags_dynamic_files = 1
 " let g:easytags_by_filetype = '~/.vim/tags'
 let g:easytags_on_cursorhold = 0
-
+let g:easytags_events = ['BufWritePost']
 
 "---------------------------------------------------------------
 " NERDTree
@@ -367,13 +367,14 @@ map <F8> :vertical wincmd f<CR>
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python-mode
-let pymode_lint = 1
-let pymode_lint_checker = 'pyflakes,pep8'
-let pymode_lint_ignore = 'W391,E501'
+" let pymode_lint = 1
+" let pymode_lint_checker = 'pyflakes,pep8'
+" let pymode_lint_ignore = 'W391,E501'
 " let g:pymode_rope = 0
 
-let g:ConqueTerm_PyVersion = 2
+" let g:ConqueTerm_PyVersion = 2
 " Tweak python hilighting etc
+
 au FileType python syn keyword pythonDecorator True None False self
 let python_highlight_all = 1
 let python_highlight_builtin_objs = 1
@@ -408,6 +409,7 @@ au filetype vim setlocal sw=4 sts=4 et fdm=marker
 au filetype c   setlocal sw=4 sts=4 et fdm=syntax
 au filetype cpp setlocal sw=4 sts=4 et fdm=syntax
 au filetype rst setlocal sw=4 sts=4 et
+au filetype ruby setlocal sw=2 sts=2 et fdm=syntax
 
 " }}}
 
