@@ -4,31 +4,27 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible      " must be first line
-" The next two lines ensure that the ~/.vim/bundle/ system works
-
-" runtime bundle/vim-pathogen/autoload/pathogen.vim
-" call pathogen#infect()
+filetype off
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Call vundle directly
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " main bundle
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'scrooloose/syntastic'
-" Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'bling/vim-airline'
 Bundle 'milkypostman/vim-togglelist'
 Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-misc'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'xolox/vim-pyref'
 Bundle 'xolox/vim-easytags'
 Bundle 'fs111/pydoc.vim'
@@ -40,7 +36,9 @@ Bundle 'Align'
 Bundle 'majutsushi/tagbar'
 Bundle 'rememberthemer/rtm-snipmate.vim'
 Bundle 'sandeepcr529/Buffet.vim'
-Bundle 'mbadran/headlights'
+" Bundle 'mbadran/headlights'
+
+call vundle#end()
 " }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL "{{{
@@ -363,10 +361,10 @@ map <F8> :vertical wincmd f<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Python-mode
-let pymode_lint = 1
-let pymode_lint_checker = 'pyflakes,pep8'
-let pymode_lint_ignore = 'W391,E501'
+" " Python-mode
+" let pymode_lint = 1
+" let pymode_lint_checker = 'pyflakes,pep8'
+" let pymode_lint_ignore = 'W391,E501'
 " let g:pymode_rope = 0
 
 let g:ConqueTerm_PyVersion = 2
