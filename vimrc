@@ -155,10 +155,10 @@ set hlsearch                " Highlight search results
 " set magic
 
 " Use regex for searches
-nnoremap / /\v
-vnoremap / /\v
-nnoremap ? ?\v
-vnoremap ? ?\v
+" nnoremap / /\v
+" vnoremap / /\v
+" nnoremap ? ?\v
+" vnoremap ? ?\v
 set ignorecase              " Ignore case when searching
 set smartcase               " Don't ignore case if we have a capital letter
 
