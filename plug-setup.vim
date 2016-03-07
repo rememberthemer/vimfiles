@@ -4,8 +4,8 @@
 " Install vim-plug if we don't arlready have it
 if empty(glob("~/.vim/autoload/plug.vim"))
     " Ensure all needed directories exist  (Thanks @kapadiamush)
-    execute 'mkdir -p ~/.vim/plugged'
-    execute 'mkdir -p ~/.vim/autoload'
+    execute '!mkdir -p ~/.vim/plugged'
+    execute '!mkdir -p ~/.vim/autoload'
     " Download the actual plugin manager
     execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
@@ -34,6 +34,7 @@ Plug 'majutsushi/tagbar'
 Plug 'xolox/vim-pyref', {'for': 'python'}
 Plug 'fs111/pydoc.vim', {'for': 'python'}
 Plug 'jmcantrell/vim-virtualenv'
+Plug 'tell-k/vim-autopep8', {'for': 'python'}
 " Find the class/method based on cursor position
 " Plug 'vim-scripts/pythonhelper'
 

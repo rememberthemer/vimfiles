@@ -73,7 +73,7 @@ set textwidth=79            " Break lines at just under 80 characters
 if exists('+colorcolumn')
   set colorcolumn=+1        " Highlight the column after `textwidth`
 endif
-set virtualedit=onemore   " allow for cursor beyond last character
+" set virtualedit=onemore   " allow for cursor beyond last character
 set diffopt+=iwhite       " make diff ignore whitespace 
 set modeline
 "
@@ -261,10 +261,9 @@ let MRU_Max_Menu_Entries = 20
 let MRU_Max_Submenu_Entries = 20
 
 " C support
-let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
-let g:C_GlobalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
-let g:C_LocalTemplateFile=$HOME."/.vim/bundle/c.vim/c-support/templates/Templates"
-let g:C_CodeSnippets=$HOME."/.vim/bundle/c.vim/c-support/codesnippets"
+let g:C_GlobalTemplateFile=$HOME."/.vim/plugger/c.vim/c-support/templates/Templates"
+let g:C_LocalTemplateFile=$HOME."/.vim/plugger/c.vim/c-support/templates/Templates"
+let g:C_CodeSnippets=$HOME."/.vim/plugger/c.vim/c-support/codesnippets"
 
 " NERDCommenter
 let NERDSpaceDelims=1
@@ -354,7 +353,7 @@ let python_highlight_indent_errors = 1
 
 " trim trailing white space
 au filetype python setlocal sw=4 et sts=4 tw=120 colorcolumn=80 fdm=syntax
-au BufWritePre *.py :StripTrailingWhitespaces()
+" au BufWritePre *.py :call StripTrailingWhitespaces()
 "}}}
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -414,9 +413,10 @@ function! Uncrustify(language)
       \ . ' -c ' . g:uncrustify_cfg_file_path)
 endfunction
 
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
 
 " }}}
 
-" reread .vimrc when saved
-" au BufWritePost ~/.vimrc   so ~/.vimrc
 
