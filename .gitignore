@@ -2,6 +2,4 @@ c-support
 tmp/
 .netrwhist
 tags
-myplugins/
 plugged/
-autoload/plug.vim

@@ -62,9 +62,12 @@ Plug 'mayansmoke'
 Plug 'croaky/vim-colors-github'
 Plug 'zenburn'
 Plug 'gilgigilgil/anderson.vim'
+Plug 'tomasr/molokai'
+Plug 'KabbAmine/yowish.vim'
+
 
 " my colorscheme
-Plug '~/Documents/workspace/vim/vim-dullokai'
+Plug 'rememberthemer/vim-dullokai'
 
 " mac specific bundles
 if has("unix")
