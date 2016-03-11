@@ -7,7 +7,7 @@ set nocompatible " This must be first, because it changes other options
 " Installing the Plug plugin manager, and all the plugins are included in this
 " other file.
 source $HOME/.vim/plug-setup.vim
-
+let s:plugindir=$HOME."/.vim/plugger"
 
 " }}}-------------------------------------------------------------------------
 "   Base Options                                                          {{{
@@ -152,7 +152,7 @@ endif
 set incsearch               " Show search results as we type
 set showmatch               " Show matching brackets
 set hlsearch                " Highlight search results
-" set magic
+set magic
 
 " Use regex for searches
 " nnoremap / /\v
@@ -198,7 +198,7 @@ endif
 " ----------------------------------------------------------------------------
 
 " Edit the vimrc file
-nmap <silent> <Leader>ev :vsplit $MYVIMRC<CR>
+nmap <silent> <Leader>ev :vsplit $HOME/.vim/vimrc<CR>
 nmap <silent> <Leader>sv :source $MYVIMRC<CR>
 
 " Function to trim trailing white space
@@ -243,9 +243,9 @@ let g:is_bash=1
 " }}} """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OMNIFUNC stuff "{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocmd FileType c set omnifunc=ccomplete#Complete
-" autocmd FileType python set omnifunc=pythoncomplete#Complete
-" autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " }}}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -261,9 +261,9 @@ let MRU_Max_Menu_Entries = 20
 let MRU_Max_Submenu_Entries = 20
 
 " C support
-let g:C_GlobalTemplateFile=$HOME."/.vim/plugger/c.vim/c-support/templates/Templates"
-let g:C_LocalTemplateFile=$HOME."/.vim/plugger/c.vim/c-support/templates/Templates"
-let g:C_CodeSnippets=$HOME."/.vim/plugger/c.vim/c-support/codesnippets"
+let g:C_GlobalTemplateFile = s:plugindir."/c.vim/c-support/templates/Templates"
+let g:C_LocalTemplateFile = s:plugindir."/c.vim/c-support/templates/Templates"
+let g:C_CodeSnippets = s:plugindir."/c.vim/c-support/codesnippets"
 
 " NERDCommenter
 let NERDSpaceDelims=1
@@ -323,7 +323,6 @@ vnoremap > >gv
 vnoremap = =gv
 
 
-" noremap <silent> <leader>sw :StripWhitespaces<CR>
 noremap <silent> <F2> :NERDTreeToggle<CR>
 noremap <silent> <F3> :TagbarToggle<CR>
 noremap <silent> <F4> :Bufferlist<CR>
