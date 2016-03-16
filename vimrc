@@ -4,8 +4,7 @@
 " Allow vim to break compatibility with vi
 set nocompatible " This must be first, because it changes other options
 
-" Installing the Plug plugin manager, and all the plugins are included in this
-" other file.
+" Add plugin declarations/load options to 'plug-setup.vim'
 source $HOME/.vim/plug-setup.vim
 let s:plugindir=$HOME."/.vim/plugger"
 
