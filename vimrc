@@ -303,7 +303,7 @@ let g:snips_company = 'Adrian Benson'
 let g:snips_copyright = g:snips_company
 
 " Airline
-let g:airline_theme='zenburn'
+let g:airline_theme='molokai'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
