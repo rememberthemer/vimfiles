@@ -22,6 +22,7 @@ Plug 'scrooloose/syntastic'
 " Git ====
 " Git from within Vim
 Plug 'tpope/vim-fugitive'
+"
 " Show +/- for uncommitted changes
 Plug 'airblade/vim-gitgutter'
 
@@ -32,7 +33,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 " Browse tags
 Plug 'majutsushi/tagbar'
-
+Plug 'valloric/youcompleteme'
 
 " Python ====
 Plug 'xolox/vim-pyref', {'for': 'python'}
@@ -55,7 +56,8 @@ Plug 'tpope/vim-sleuth'
 " align text/blocks in choice ways
 Plug 'Align'
 " code snippets
-Plug 'rememberthemer/rtm-snipmate.vim'
+Plug 'SirVer/ultisnips'
+" Plug 'rememberthemer/rtm-snipmate.vim'
 Plug 'milkypostman/vim-togglelist'
 " list Most Recently Used files
 Plug 'mru.vim'
@@ -67,6 +69,7 @@ Plug 'emezeske/manpageview'
 " A nice tool line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 " themes
 Plug 'junegunn/seoul256.vim'
 Plug 'mayansmoke'
@@ -75,21 +78,9 @@ Plug 'zenburn'
 Plug 'gilgigilgil/anderson.vim'
 Plug 'tomasr/molokai'
 Plug 'KabbAmine/yowish.vim'
+
 " my colorscheme
 Plug 'rememberthemer/vim-dullokai'
-
-" mac specific bundles
-if has("unix")
-    let s:uname = substitute(system("uname"), '\n','','')
-else
-    let s:uname = ""
-endif
-
-if s:uname == "Darwin"
-    Plug 'vim-scripts/applescript.vim'
-else
-    " Plugin 'majutsushi/tagbar'
-endif
 
 call plug#end()
 

@@ -252,7 +252,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " pydoc
-let g:pydoc_cmd = "pydoc"
+let g:pydoc_cmd = "pydoc3"
 
 " MRU - most recently used fiiles
 let MRU_File = $HOME."/.vim/tmp/vim_mru_files"
@@ -295,7 +295,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:loaded_syntastic_sh_checkbashisms_checker=1
 let g:syntastic_c_compiler_options = ' -std=c99'
 let g:syntastic_c_remove_include_errors = 1
-let g:syntastic_python_checkers=['pylint', 'python', 'flake8']
+let g:syntastic_python_checkers=['pylint3', 'python3', 'flake8']
 
 " SnipMate
 let g:snips_author = 'Adrian Benson <Adrian.M.Benson__AT__gmail__DOT__com>'
