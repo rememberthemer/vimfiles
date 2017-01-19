@@ -136,12 +136,12 @@ if &term =~ '^screen'
     set ttymouse=xterm2
 endif
 
-" use a minimal bashrc for 'sh' - problems with more complex setups 
-if has("gui_running")
-    set shell=/bin/bash\ --rcfile\ ~/.vim/bashrc.gvim
-else
-    set shell=/bin/bash
-endif
+" " use a minimal bashrc for 'sh' - problems with more complex setups 
+" if has("gui_running")
+"     set shell=/bin/bash\ --rcfile\ ~/.vim/bashrc.gvim
+" else
+"     set shell=/bin/bash
+" endif
 
 
 " }}}-------------------------------------------------------------------------
