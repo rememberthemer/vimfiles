@@ -14,12 +14,6 @@ HISTFILESIZE=2000
 
 export PS1='[VIM]\h:\w\$ '
 
-# colourful manpages
-
-# #names for dpkg's
-export DEBFULLNAME="The Mer"
-export DEBEMAIL="rememberthemer@gmail.com"
-export BROWSER=chromium
 
 # Alias definitions.
 alias ll='ls -alF'
