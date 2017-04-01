@@ -33,7 +33,8 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 " Browse tags
 Plug 'majutsushi/tagbar'
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
+" Plug 'ervandew/supertab'
 
 " Python ====
 Plug 'xolox/vim-pyref', {'for': 'python'}
@@ -42,12 +43,12 @@ Plug 'fs111/pydoc.vim', {'for': 'python'}
 " interact with python virtual envs
 Plug 'jmcantrell/vim-virtualenv'
 " automatically fix/prettify python code
-Plug 'tell-k/vim-autopep8', {'for': 'python'}
-
+" Plug 'tell-k/vim-autopep8', {'for': 'python'}
+Plug 'hhatto/autopep8'
 "
 " other languages ====
 Plug 'c.vim'
-Plug 'bash-support.vim', {'for': 'sh'}
+" Plug 'bash-support.vim', {'for': 'sh'}
 
 
 " misc tweaks ====
@@ -57,12 +58,19 @@ Plug 'tpope/vim-sleuth'
 Plug 'Align'
 " code snippets
 Plug 'SirVer/ultisnips'
-" Plug 'rememberthemer/rtm-snipmate.vim'
+Plug 'honza/vim-snippets'
+
 Plug 'milkypostman/vim-togglelist'
 " list Most Recently Used files
 Plug 'mru.vim'
 " open manpages from within vim (shift-k)
 Plug 'emezeske/manpageview'
+
+" strip white spaces
+Plug 'ntpeters/vim-better-whitespace'
+
+" indent guides
+Plug 'nathanaelkane/vim-indent-guides'
 
 
 " pretty pretty
