@@ -70,13 +70,14 @@ Plug 'vim-airline/vim-airline-themes'
 " themes
 Plug 'junegunn/seoul256.vim'
 Plug 'mayansmoke'
-Plug 'croaky/vim-colors-github'
 Plug 'zenburn'
 Plug 'gilgigilgil/anderson.vim'
 Plug 'tomasr/molokai'
 Plug 'KabbAmine/yowish.vim'
 " my colorscheme
 Plug 'rememberthemer/vim-dullokai'
+Plug 'rhysd/vim-color-spring-night'
+Plug 'zanglg/nova.vim'
 
 " mac specific bundles
 if has("unix")
