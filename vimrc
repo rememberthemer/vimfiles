@@ -210,7 +210,7 @@ function! StripTrailingWhitespaces()
 endfun
 
 " Trim trailing white space
-nmap <silent> <Leader>t :call StripTrailingWhitespaces()<CR>
+nmap <silent> <Leader>sw :call StripTrailingWhitespaces()<CR>
 
 " Cd to the current file's directory
 nnoremap <Leader>. :cd %:p:h<CR>:pwd<CR>
@@ -295,7 +295,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:loaded_syntastic_sh_checkbashisms_checker=1
 let g:syntastic_c_compiler_options = ' -std=c99'
 let g:syntastic_c_remove_include_errors = 1
-let g:syntastic_python_checkers=['pylint', 'python2', 'flake8']
+let g:syntastic_python_checkers=['pylint3', 'python3', 'flake8']
 
 " SnipMate
 let g:snips_author = 'Adrian Benson <Adrian.M.Benson__AT__gmail__DOT__com>'
