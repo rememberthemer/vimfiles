@@ -43,11 +43,11 @@ Plug 'fs111/pydoc.vim', {'for': 'python'}
 " interact with python virtual envs
 Plug 'jmcantrell/vim-virtualenv'
 " automatically fix/prettify python code
-" Plug 'tell-k/vim-autopep8', {'for': 'python'}
-Plug 'hhatto/autopep8'
+Plug 'tell-k/vim-autopep8', {'for': 'python'}
+" Plug 'hhatto/autopep8'
 "
 " other languages ====
-Plug 'c.vim'
+Plug 'vim-scripts/c.vim'
 " Plug 'bash-support.vim', {'for': 'sh'}
 
 
@@ -55,14 +55,14 @@ Plug 'c.vim'
 " Adjust 'shiftwidth' and 'expandtab' heuristically based on the current file
 Plug 'tpope/vim-sleuth'
 " align text/blocks in choice ways
-Plug 'Align'
+Plug 'vim-scripts/Align'
 " code snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'milkypostman/vim-togglelist'
 " list Most Recently Used files
-Plug 'mru.vim'
+Plug 'vim-scripts/mru.vim'
 " open manpages from within vim (shift-k)
 Plug 'emezeske/manpageview'
 
@@ -80,8 +80,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 " themes
 Plug 'junegunn/seoul256.vim'
-Plug 'mayansmoke'
-Plug 'zenburn'
+Plug 'vim-scripts/mayansmoke'
+Plug 'vim-scripts/zenburn'
 Plug 'gilgigilgil/anderson.vim'
 Plug 'tomasr/molokai'
 Plug 'KabbAmine/yowish.vim'
